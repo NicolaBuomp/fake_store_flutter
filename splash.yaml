@@ -1,0 +1,14 @@
+flutter_native_splash: 
+  color: '#FFFFFF'
+  color_dark: '#272727'
+  # image: alleghiamo il logo
+  # image_dark: alleghiamo il logo dark
+
+
+  android_12:
+    color: '#FFFFFF'
+    color_dark: '#272727'
+    # image: alleghiamo il logo
+    # image_dark: alleghiamo il logo dark
+  
+  web: false
