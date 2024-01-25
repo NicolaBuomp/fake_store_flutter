@@ -21,7 +21,12 @@ class THelperFunctions {
       return Colors.purple;
     } else if (value == 'Black') {
       return Colors.black;
-    } else if (value == 'White') {}
+    } else if (value == 'White') {
+      return Colors.white;
+    } else if (value == 'Brown') {
+      return Colors.brown;
+    }
+    return null;
   }
 
   static void showAlert(String title, String message) {
