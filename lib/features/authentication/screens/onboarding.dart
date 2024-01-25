@@ -1,22 +1,24 @@
+import 'package:fake_store_flutter/features/authentication/controllers.onboarding/onboarding_controller.dart';
 import 'package:fake_store_flutter/features/authentication/screens/widgets/onboarding_dot_navigation.dart';
 import 'package:fake_store_flutter/features/authentication/screens/widgets/onboarding_next_button.dart';
 import 'package:fake_store_flutter/features/authentication/screens/widgets/onboarding_page.dart';
 import 'package:fake_store_flutter/features/authentication/screens/widgets/onboarding_skip.dart';
-import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:fake_store_flutter/utils/constants/text_string.dart';
-import 'package:fake_store_flutter/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
+import 'package:get/get.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(OnBoardingController());
     return Scaffold(
       body: Stack(
         children: [
           PageView(
+            controller: controller.pageController,
+            onPageChanged: controller.updatePageIndicator,
             children: const [
               OnBoardingPage(
                 image: 'https://picsum.photos/200/300',
