@@ -26,7 +26,8 @@ class TTexts {
   static const String createAccount = "Crea un account";
   static const String orSignInWith = "oppure accedi con";
   static const String orSignUpwith = "oppure registrati con";
-  static const String iAgreeTo = "Accetto";
+  static const String isAgreeTo = "Accetto";
+  static const String and = "e";
   static const String privacyPolicy = "Informativa sulla privacy";
   static const String termsofUse = "Termini d'uso";
   static const String verificationCode = "Codice di verifica";
