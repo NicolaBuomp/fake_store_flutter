@@ -1,7 +1,9 @@
+import 'package:fake_store_flutter/features/authentication/screens/signup/verify_email.dart';
 import 'package:fake_store_flutter/features/authentication/screens/signup/widgets/terms_and_condition.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:fake_store_flutter/utils/constants/text_string.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SignupForm extends StatelessWidget {
@@ -83,7 +85,7 @@ class SignupForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () => Get.to(const VerifyEmailScreen()),
               child: const Text(TTexts.createAccount),
             ),
           ),

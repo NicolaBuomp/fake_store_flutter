@@ -1,3 +1,4 @@
+import 'package:fake_store_flutter/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:fake_store_flutter/features/authentication/screens/signup/signup.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:fake_store_flutter/utils/constants/text_string.dart';
@@ -29,6 +30,7 @@ class LoginForm extends StatelessWidget {
 
             // Password
             TextFormField(
+              obscureText: true,
               decoration: const InputDecoration(
                   prefixIcon: Icon(Iconsax.password_check),
                   labelText: TTexts.password,
@@ -48,7 +50,8 @@ class LoginForm extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                    onPressed: () {}, child: const Text(TTexts.forgetPassword))
+                    onPressed: () => Get.to(() => const ForgetPassword()),
+                    child: const Text(TTexts.forgetPassword))
               ],
             ),
             const SizedBox(height: TSizes.spaceBtwSections),

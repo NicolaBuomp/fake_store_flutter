@@ -1,4 +1,4 @@
-import 'package:fake_store_flutter/features/authentication/screens/login/widgets/form_divider.dart';
+import 'package:fake_store_flutter/common/widgets/login_signup/form_divider.dart';
 import 'package:fake_store_flutter/features/authentication/screens/login/widgets/social_buttons.dart';
 import 'package:fake_store_flutter/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';

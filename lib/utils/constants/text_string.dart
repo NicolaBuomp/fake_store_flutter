@@ -32,7 +32,11 @@ class TTexts {
   static const String termsofUse = "Termini d'uso";
   static const String verificationCode = "Codice di verifica";
   static const String resendEmail = "Rinvia email";
+  static const String tContinue = "Continua";
   static const String resendEmailIn = "Rinvia email tra";
+
+  static const String submit = "Invia";
+  static const String ok = "Ok";
 
   static const String loginTitle = "Bentornato, ";
   static const String loginSubTitle =

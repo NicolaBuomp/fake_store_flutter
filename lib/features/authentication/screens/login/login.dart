@@ -1,5 +1,5 @@
 import 'package:fake_store_flutter/common/styles/spacing_styles.dart';
-import 'package:fake_store_flutter/features/authentication/screens/login/widgets/form_divider.dart';
+import 'package:fake_store_flutter/common/widgets/login_signup/form_divider.dart';
 import 'package:fake_store_flutter/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:fake_store_flutter/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:fake_store_flutter/features/authentication/screens/login/widgets/social_buttons.dart';
