@@ -40,6 +40,6 @@ flutter:
 
   assets: 
     - assets/logos/
-    - assets/icons/
-    - assets/images/
+    # - assets/icons/
+    # - assets/images/
   

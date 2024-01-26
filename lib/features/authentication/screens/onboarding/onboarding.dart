@@ -1,8 +1,8 @@
 import 'package:fake_store_flutter/features/authentication/controllers.onboarding/onboarding_controller.dart';
-import 'package:fake_store_flutter/features/authentication/screens/widgets/onboarding_dot_navigation.dart';
-import 'package:fake_store_flutter/features/authentication/screens/widgets/onboarding_next_button.dart';
-import 'package:fake_store_flutter/features/authentication/screens/widgets/onboarding_page.dart';
-import 'package:fake_store_flutter/features/authentication/screens/widgets/onboarding_skip.dart';
+import 'package:fake_store_flutter/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
+import 'package:fake_store_flutter/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
+import 'package:fake_store_flutter/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
+import 'package:fake_store_flutter/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
 import 'package:fake_store_flutter/utils/constants/text_string.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

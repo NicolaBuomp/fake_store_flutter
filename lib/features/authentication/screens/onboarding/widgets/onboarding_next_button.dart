@@ -18,7 +18,7 @@ class OnBordingNextButton extends StatelessWidget {
         right: TSizes.defaultSpace,
         bottom: TDeviceUtils.getBottomNavigationBarHeight(),
         child: ElevatedButton(
-          onPressed: () => OnBoardingController.instance.skipPage(),
+          onPressed: () => OnBoardingController.instance.nextPage(),
           style: ElevatedButton.styleFrom(
               shape: const CircleBorder(),
               backgroundColor: isDark ? TColors.primary : Colors.black),
