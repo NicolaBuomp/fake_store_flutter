@@ -1,55 +1,56 @@
 class TTexts {
   static const String onBoardingTitle1 = "Scegli il prodotto";
   static const String onBoardingTitle2 = "Seleziona il metodo di pagamento";
-  static const String onBoardingTitle3 = "Deliver at your door step";
+  static const String onBoardingTitle3 = "Consegna alla tua porta";
 
   static const String onBoardingSubTitle1 =
-      "Welcome to a World of Limitless Choice - Your Perfect Product Awaits!";
+      "Benvenuto in un mondo di scelta illimitata - Il tuo prodotto perfetto ti aspetta!";
   static const String onBoardingSubTitle2 =
-      "For Seamless Transactions, Choose Your Payment Path - Your Convenience, Our Priority!";
+      "Per transazioni senza soluzione di continuità, scegli il tuo percorso di pagamento - La tua comodità è la nostra priorità!";
   static const String onBoardingSubTitle3 =
-      "For OurDoor to Yours - Swift, Source, and Contacless Delivery!";
+      "Dalla nostra porta alla tua - Consegna rapida, sicura e senza contatto!";
 
   static const String homeAppBarTitle = "Un ottimo giorno per lo shopping";
   static const String homeAppBarSubTitle = "Taimoor Sikander";
 
-  static const String firstName = "First Name";
-  static const String lastName = "Last Name";
+  static const String firstName = "Nome";
+  static const String lastName = "Cognome";
   static const String email = "E-Mail";
   static const String password = "Password";
-  static const String newPassword = "New Password";
-  static const String username = "Username";
-  static const String phoneNo = "Phone Number";
-  static const String rememberMe = "Remember Me";
-  static const String forgetPassword = "Forget Password?";
-  static const String signIn = "Sign In";
-  static const String createAccount = "Create Account";
-  static const String orSignInWith = "or sign in with";
-  static const String orSignUpwith = "or sign up with";
-  static const String iAgreeTo = "I agree to";
-  static const String privacyPolicy = "Privacy Policy";
-  static const String termsofUse = "Terms of Use";
-  static const String verificationCode = "verificationCode";
-  static const String resendEmail = "Resend Email";
-  static const String resendEmailIn = "Resend email in";
+  static const String newPassword = "Nuova Password";
+  static const String username = "Nome utente";
+  static const String phoneNo = "Numero di telefono";
+  static const String rememberMe = "Ricordami";
+  static const String forgetPassword = "Hai dimenticato la password?";
+  static const String signIn = "Accedi";
+  static const String createAccount = "Crea un account";
+  static const String orSignInWith = "oppure accedi con";
+  static const String orSignUpwith = "oppure registrati con";
+  static const String iAgreeTo = "Accetto";
+  static const String privacyPolicy = "Informativa sulla privacy";
+  static const String termsofUse = "Termini d'uso";
+  static const String verificationCode = "Codice di verifica";
+  static const String resendEmail = "Rinvia email";
+  static const String resendEmailIn = "Rinvia email tra";
 
-  static const String loginTitle = "Welcome back, ";
+  static const String loginTitle = "Bentornato, ";
   static const String loginSubTitle =
-      "Discover Limitless Choices and Unmatched Convenience.";
-  static const String signupTitle = "Let's create your account";
-  static const String forgetPasswordTitle = "Forget password";
+      "Scopri scelte illimitate e convenienza incomparabile.";
+  static const String signupTitle = "Creiamo il tuo account";
+  static const String forgetPasswordTitle = "Password dimenticata";
   static const String forgetPasswordSubTitle =
-      "Don't worry sometimes people can forget too, enter your email and we will send you a password reset link.";
-  static const String changeYourPasswordTitle = "Password Reset Email Sent";
+      "Non preoccuparti, a volte le persone possono dimenticare anche loro, inserisci la tua email e ti invieremo un link per reimpostare la password.";
+  static const String changeYourPasswordTitle =
+      "Email di reset della password inviata";
   static const String changeYourPasswordSubTitle =
-      "Your Account Security is Our Priority! We've Sent You a Secure Link to Safely Change Your Password and Keep Your Account Protected.";
-  static const String confirmEmail = "Verify your email address!";
+      "La sicurezza del tuo account è la nostra priorità! Ti abbiamo inviato un link sicuro per cambiare la tua password e mantenere il tuo account protetto.";
+  static const String confirmEmail = "Verifica il tuo indirizzo email!";
   static const String confirmEmailSubTitle =
-      "Congratulations! Your Account Awaits: Verify Your Email to Start Shopping and Experience a World of Unrivaled Deals and Personalized Offers.";
+      "Congratulazioni! Il tuo account ti aspetta: verifica la tua email per iniziare a fare shopping e vivere un mondo di offerte impareggiabili e offerte personalizzate.";
   static const String emailNotReceivedMessage =
-      "Didn't get the email? Check your junk/spam or resend it.";
+      "Non hai ricevuto l'email? Controlla nella cartella spam o rinviacela.";
   static const String yourAccountCreatedTitle =
-      "Your account successfully created!";
+      "Il tuo account è stato creato con successo!";
   static const String yourAccountCreatedSubTitle =
-      "Welcome to Your Ultimate Shopping Destination: Your Account is Created, Unleash the Joy of Seamless Online Shopping!";
+      "Benvenuto nella tua destinazione di shopping definitiva: il tuo account è stato creato, libera la gioia dello shopping online senza problemi!";
 }
