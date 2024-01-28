@@ -53,7 +53,69 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            // Body
+            Padding(
+              padding: EdgeInsets.all(TSizes.defaultSpace),
+              child: TroundedImage(
+                imageUrl: 'https://picsum.photos/200/300',
+              ),
+            ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class TroundedImage extends StatelessWidget {
+  const TroundedImage({
+    super.key,
+    this.border,
+    this.padding,
+    this.onPress,
+    this.width = 150,
+    this.height = 150,
+    this.applyImageRadius = false,
+    required this.imageUrl,
+    this.fit = BoxFit.contain,
+    this.backgroundColor = TColors.light,
+    this.isNetworkImage = false,
+    this.borderRadius = TSizes.md,
+  });
+
+  final double? width, height;
+  final String imageUrl;
+  final bool applyImageRadius;
+  final BoxBorder? border;
+  final Color backgroundColor;
+  final BoxFit? fit;
+  final EdgeInsetsGeometry? padding;
+  final bool isNetworkImage;
+  final VoidCallback? onPress;
+  final double borderRadius;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onPress,
+      child: Container(
+        width: width,
+        height: height,
+        padding: padding,
+        decoration: BoxDecoration(
+            border: border,
+            color: backgroundColor,
+            borderRadius: BorderRadius.circular(borderRadius)),
+        child: ClipRRect(
+          borderRadius: applyImageRadius
+              ? BorderRadius.circular(borderRadius)
+              : BorderRadius.zero,
+          child: Image(
+            image: isNetworkImage
+                ? NetworkImage(imageUrl)
+                : AssetImage(imageUrl) as ImageProvider,
+            fit: fit,
+          ),
         ),
       ),
     );

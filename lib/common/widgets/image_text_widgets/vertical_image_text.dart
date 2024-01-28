@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class TVerticalImageText extends StatelessWidget {
   const TVerticalImageText({
     super.key,
-    this.image = 'https://picsum.photos/20/30',
+    this.image = 'https://picsum.photos/200/300',
     required this.title,
     this.textColor = TColors.white,
     this.backgraoundColor = TColors.white,
