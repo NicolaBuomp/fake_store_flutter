@@ -3,7 +3,6 @@ import 'package:fake_store_flutter/common/widgets/custom_shapes/container/circul
 import 'package:fake_store_flutter/common/widgets/images/rounded_image.dart';
 import 'package:fake_store_flutter/features/shop/controllers/home_controller.dart';
 import 'package:fake_store_flutter/utils/constants/colors.dart';
-import 'package:fake_store_flutter/utils/constants/image_strings.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -26,7 +25,12 @@ class TPromoSlider extends StatelessWidget {
             viewportFraction: 1,
             onPageChanged: (index, _) => controller.updatepageIndicator(index),
           ),
-          items: banners.map((url) => TroundedImage(imageUrl: url)).toList(),
+          items: banners
+              .map((url) => TroundedImage(
+                    imageUrl: url,
+                    isNetworkImage: false,
+                  ))
+              .toList(),
         ),
         const SizedBox(
           height: TSizes.spaceBtwItems,
