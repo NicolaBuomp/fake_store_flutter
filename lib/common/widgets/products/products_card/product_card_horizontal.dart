@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ProductCardHorizontal extends StatelessWidget {
-  const ProductCardHorizontal({Key? key}) : super(key: key);
+  const ProductCardHorizontal({super.key});
 
   @override
   Widget build(BuildContext context) {

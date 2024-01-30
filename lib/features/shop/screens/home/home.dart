@@ -1,8 +1,6 @@
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:fake_store_flutter/common/widgets/custom_shapes/container/circular_container.dart';
 import 'package:fake_store_flutter/common/widgets/custom_shapes/container/primary_header_container.dart';
 import 'package:fake_store_flutter/common/widgets/custom_shapes/container/search_container.dart';
-import 'package:fake_store_flutter/common/widgets/images/rounded_image.dart';
+import 'package:fake_store_flutter/common/widgets/layouts/grid_layout.dart';
 import 'package:fake_store_flutter/common/widgets/products/products_card/product_card_vertical.dart';
 import 'package:fake_store_flutter/common/widgets/texts/section_heading.dart';
 import 'package:fake_store_flutter/features/shop/screens/home/widget/home_appbar.dart';
@@ -18,12 +16,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       // appBar: Padding(),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TPrimaryHeaderContainer(
+            const TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   // Appbar
@@ -61,20 +59,22 @@ class HomeScreen extends StatelessWidget {
             ),
             // Body
             Padding(
-              padding: EdgeInsets.all(TSizes.defaultSpace),
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
-                  TPromoSlider(
+                  const TPromoSlider(
                     banners: [
                       TImages.imageBannerCard,
                       TImages.imageBannerCard,
                       TImages.imageBannerCard
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
-                  ProductCardVertical()
+                  TGridLayout(
+                      itemCount: 4,
+                      itemBuilder: (_, index) => const ProductCardVertical())
                 ],
               ),
             ),
