@@ -9,13 +9,13 @@ class TVerticalImageText extends StatelessWidget {
     this.image = 'https://picsum.photos/200/300',
     required this.title,
     this.textColor = TColors.white,
-    this.backgraoundColor = TColors.white,
+    this.backgroundColor = TColors.white,
     this.onTap,
   });
 
   final String image, title;
   final Color textColor;
-  final Color? backgraoundColor;
+  final Color? backgroundColor;
   final void Function()? onTap;
 
   @override
@@ -31,7 +31,7 @@ class TVerticalImageText extends StatelessWidget {
               height: 56,
               padding: const EdgeInsets.all(TSizes.md),
               decoration: BoxDecoration(
-                color: backgraoundColor ??
+                color: backgroundColor ??
                     (THelperFunctions.isDarkMode(context)
                         ? TColors.black
                         : TColors.white),

@@ -7,17 +7,18 @@ class TSectionHeading extends StatelessWidget {
     this.showActionButton = true,
     required this.title,
     this.buttonTitle = 'View all',
-    this.onPress,
+    this.onPressd,
   });
 
   final Color? textColor;
   final bool showActionButton;
   final String title, buttonTitle;
-  final void Function()? onPress;
+  final void Function()? onPressd;
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           title,
@@ -29,7 +30,7 @@ class TSectionHeading extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
         ),
         if (showActionButton)
-          TextButton(onPressed: () {}, child: Text(buttonTitle))
+          TextButton(onPressed: onPressd, child: Text(buttonTitle))
       ],
     );
   }

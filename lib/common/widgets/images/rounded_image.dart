@@ -1,9 +1,10 @@
 import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
+import 'package:fake_store_flutter/utils/helpers/helper_funcion.dart';
 import 'package:flutter/material.dart';
 
-class TroundedImage extends StatelessWidget {
-  const TroundedImage({
+class TRoundedImage extends StatelessWidget {
+  const TRoundedImage({
     super.key,
     this.border,
     this.padding,
@@ -13,7 +14,7 @@ class TroundedImage extends StatelessWidget {
     this.applyImageRadius = true,
     required this.imageUrl,
     this.fit = BoxFit.contain,
-    this.backgroundColor = TColors.light,
+    required this.backgroundColor,
     this.isNetworkImage = true,
     this.borderRadius = TSizes.md,
   });
@@ -22,7 +23,7 @@ class TroundedImage extends StatelessWidget {
   final String imageUrl;
   final bool applyImageRadius;
   final BoxBorder? border;
-  final Color backgroundColor;
+  final Color? backgroundColor;
   final BoxFit? fit;
   final EdgeInsetsGeometry? padding;
   final bool isNetworkImage;

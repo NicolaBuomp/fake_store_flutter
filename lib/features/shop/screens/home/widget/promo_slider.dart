@@ -26,9 +26,10 @@ class TPromoSlider extends StatelessWidget {
             onPageChanged: (index, _) => controller.updatepageIndicator(index),
           ),
           items: banners
-              .map((url) => TroundedImage(
+              .map((url) => TRoundedImage(
                     imageUrl: url,
                     isNetworkImage: false,
+                    backgroundColor: null,
                   ))
               .toList(),
         ),

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-class TAppbar extends StatelessWidget {
-  const TAppbar({
+class TAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const TAppBar({
     super.key,
     this.title,
     this.actions,
@@ -20,6 +20,9 @@ class TAppbar extends StatelessWidget {
   final VoidCallback? leadingOnPress;
 
   @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: TSizes.md),
@@ -27,15 +30,15 @@ class TAppbar extends StatelessWidget {
         automaticallyImplyLeading: false,
         leading: showBackArrow
             ? IconButton(
-                onPressed: () => Get.back(),
-                icon: const Icon(Iconsax.arrow_left),
-              )
+          onPressed: () => Get.back(),
+          icon: const Icon(Iconsax.arrow_left),
+        )
             : leadingIcon != null
-                ? IconButton(
-                    onPressed: leadingOnPress,
-                    icon: Icon(leadingIcon),
-                  )
-                : null,
+            ? IconButton(
+          onPressed: leadingOnPress,
+          icon: Icon(leadingIcon),
+        )
+            : null,
         title: title,
         actions: actions,
       ),
