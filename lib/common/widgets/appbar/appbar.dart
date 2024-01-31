@@ -1,4 +1,5 @@
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
+import 'package:fake_store_flutter/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -20,7 +21,7 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
   final VoidCallback? leadingOnPress;
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => Size.fromHeight(TDeviceUtils.getAppBarHeight());
 
   @override
   Widget build(BuildContext context) {

@@ -7,13 +7,13 @@ class TSectionHeading extends StatelessWidget {
     this.showActionButton = true,
     required this.title,
     this.buttonTitle = 'View all',
-    this.onPressd,
+    this.onPressed,
   });
 
   final Color? textColor;
   final bool showActionButton;
   final String title, buttonTitle;
-  final void Function()? onPressd;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class TSectionHeading extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
         ),
         if (showActionButton)
-          TextButton(onPressed: onPressd, child: Text(buttonTitle))
+          TextButton(onPressed: onPressed, child: Text(buttonTitle))
       ],
     );
   }

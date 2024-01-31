@@ -1,6 +1,5 @@
 import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
-import 'package:fake_store_flutter/utils/helpers/helper_funcion.dart';
 import 'package:flutter/material.dart';
 
 class TRoundedImage extends StatelessWidget {

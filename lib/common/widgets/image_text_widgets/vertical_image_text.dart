@@ -1,4 +1,5 @@
 import 'package:fake_store_flutter/utils/constants/colors.dart';
+import 'package:fake_store_flutter/utils/constants/image_strings.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:fake_store_flutter/utils/helpers/helper_funcion.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +7,7 @@ import 'package:flutter/material.dart';
 class TVerticalImageText extends StatelessWidget {
   const TVerticalImageText({
     super.key,
-    this.image = 'https://picsum.photos/200/300',
+    this.image = TImages.youtubeIcon,
     required this.title,
     this.textColor = TColors.white,
     this.backgroundColor = TColors.white,
@@ -40,7 +41,7 @@ class TVerticalImageText extends StatelessWidget {
               child: Center(
                 child: Image(
                   // image: AssetImage(),
-                  image: NetworkImage(image),
+                  image: AssetImage(image),
                   fit: BoxFit.cover,
                   color: (THelperFunctions.isDarkMode(context)
                       ? TColors.black

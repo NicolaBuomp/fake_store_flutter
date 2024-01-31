@@ -28,6 +28,7 @@ class ProductCardVertical extends StatelessWidget {
             borderRadius: BorderRadius.circular(TSizes.productImageRadius),
             color: isDark ? TColors.darkerGrey : TColors.white),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TRoundedContainer(
               height: 180,
@@ -84,7 +85,9 @@ class ProductCardVertical extends StatelessWidget {
                   SizedBox(
                     height: TSizes.spaceBtwItems / 2,
                   ),
-                  TBrandTitleWithVerifiedIcon(title: 'Nike'),
+                  BrandTitleWithVerifiedIcon(
+                    title: 'Nike',
+                  ),
                 ],
               ),
             ),

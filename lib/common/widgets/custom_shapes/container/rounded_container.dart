@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class TRoundedContainer extends StatelessWidget {
   const TRoundedContainer(
-      {Key? key,
+      {super.key,
       this.width,
       this.height,
       this.radius = TSizes.cardRadiusLg,
@@ -13,8 +13,7 @@ class TRoundedContainer extends StatelessWidget {
       this.borderColor = TColors.borderPrimary,
       this.backgroundColor = TColors.white,
       this.padding,
-      this.margin})
-      : super(key: key);
+      this.margin});
 
   final double? width;
   final double? height;

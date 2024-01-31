@@ -8,6 +8,8 @@ import 'package:fake_store_flutter/utils/theme/custom_themes/text_field_theme.da
 import 'package:fake_store_flutter/utils/theme/custom_themes/text_theme.dart';
 import 'package:flutter/material.dart';
 
+import '../constants/colors.dart';
+
 class TAppTheme {
   TAppTheme._();
 
@@ -18,7 +20,7 @@ class TAppTheme {
       primaryColor: Colors.blue,
       textTheme: TTextTheme.lightTextTheme,
       chipTheme: TChipTheme.lightChipTheme,
-      scaffoldBackgroundColor: Colors.white,
+      scaffoldBackgroundColor: TColors.white,
       appBarTheme: TAppBarTheme.lightAppBarTheme,
       checkboxTheme: TCheckboxTheme.lightCheckboxTheme,
       bottomSheetTheme: TBottomSheetTheme.lightBottomSheetTheme,
@@ -32,7 +34,7 @@ class TAppTheme {
       primaryColor: Colors.blue,
       textTheme: TTextTheme.darkTextTheme,
       chipTheme: TChipTheme.darkChipTheme,
-      scaffoldBackgroundColor: Colors.black,
+      scaffoldBackgroundColor: TColors.black,
       appBarTheme: TAppBarTheme.darkAppBarTheme,
       checkboxTheme: TCheckboxTheme.darkCheckboxTheme,
       bottomSheetTheme: TBottomSheetTheme.darkBottomSheetTheme,
