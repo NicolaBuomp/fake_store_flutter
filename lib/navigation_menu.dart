@@ -1,5 +1,7 @@
+import 'package:fake_store_flutter/features/personalization/screens/settings/settings.dart';
 import 'package:fake_store_flutter/features/shop/screens/home/home.dart';
 import 'package:fake_store_flutter/features/shop/screens/store/store.dart';
+import 'package:fake_store_flutter/features/shop/screens/whishlist/whishlist.dart';
 import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:fake_store_flutter/utils/helpers/helper_funcion.dart';
 import 'package:flutter/material.dart';
@@ -47,11 +49,7 @@ class NavigationController extends GetxController {
   final screens = [
     const HomeScreen(),
     const StoreScreen(),
-    Container(
-      color: Colors.blue,
-    ),
-    Container(
-      color: Colors.green,
-    ),
+    const FavoriteScreen(),
+    const SettingsScreen(),
   ];
 }

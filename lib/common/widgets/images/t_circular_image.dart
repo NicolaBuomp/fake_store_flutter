@@ -1,6 +1,4 @@
-import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
-import 'package:fake_store_flutter/utils/helpers/helper_funcion.dart';
 import 'package:flutter/cupertino.dart';
 
 class TCircularImage extends StatelessWidget {
@@ -30,10 +28,7 @@ class TCircularImage extends StatelessWidget {
         height: height,
         padding: EdgeInsets.all(padding),
         decoration: BoxDecoration(
-          color: backgroundColor ??
-              (THelperFunctions.isDarkMode(context)
-                  ? TColors.black
-                  : TColors.white),
+          color: backgroundColor,
           borderRadius: BorderRadius.circular(100),
         ),
         child: Center(

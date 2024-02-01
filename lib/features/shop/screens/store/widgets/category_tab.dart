@@ -36,7 +36,7 @@ class CategoryTab extends StatelessWidget {
               ),
               TGridLayout(
                   itemCount: 4,
-                  itemBuilder: (_, index) => ProductCardVertical())
+                  itemBuilder: (_, index) => const ProductCardVertical())
             ],
           ),
         ),

@@ -9,6 +9,10 @@ class TImages {
 
   static const String youtubeIcon = "assets/icons/youtube-icon.png";
 
+  // user
+  static const String user = "assets/images/user/user.png";
+
+
   static const String imageProductCard1 = 'assets/images/image-1.png';
   static const String imageProductCard2 = 'assets/images/image-2.png';
   static const String imageProductCard3 = 'assets/images/image-3.png';
