@@ -4,15 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
 class UserProfileTile extends StatelessWidget {
-  const UserProfileTile(
-      {super.key,
-      required this.title,
-      required this.subtitle,
-      required this.image,
-      this.isNetworkImage = false});
+  const UserProfileTile({
+    super.key,
+    required this.title,
+    required this.subtitle,
+    required this.image,
+    this.isNetworkImage = false,
+    this.onPressed,
+  });
 
   final String title, subtitle, image;
   final bool isNetworkImage;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -33,13 +36,11 @@ class UserProfileTile extends StatelessWidget {
       ),
       subtitle: Text(
         subtitle,
-        style: Theme.of(context)
-            .textTheme
-            .bodyMedium!
-            .apply(color: TColors.white),
+        style:
+            Theme.of(context).textTheme.bodyMedium!.apply(color: TColors.white),
       ),
       trailing: IconButton(
-        onPressed: () {},
+        onPressed: onPressed,
         icon: const Icon(
           Iconsax.edit,
           color: TColors.white,

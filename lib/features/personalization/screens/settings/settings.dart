@@ -3,10 +3,12 @@ import 'package:fake_store_flutter/common/widgets/custom_shapes/container/primar
 import 'package:fake_store_flutter/common/widgets/list_tile/settings_menu_tile.dart';
 import 'package:fake_store_flutter/common/widgets/list_tile/user_profile_tile.dart';
 import 'package:fake_store_flutter/common/widgets/texts/section_heading.dart';
+import 'package:fake_store_flutter/features/personalization/screens/profile/profile.dart';
 import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:fake_store_flutter/utils/constants/image_strings.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -27,10 +29,11 @@ class SettingsScreen extends StatelessWidget {
                               .textTheme
                               .headlineMedium!
                               .apply(color: TColors.white))),
-                  const UserProfileTile(
+                  UserProfileTile(
                       title: 'Nicola Buompane',
                       subtitle: 'nicolabuompane.dev@gmail.com',
-                      image: TImages.user),
+                      image: TImages.user,
+                  onPressed: () => Get.to(() => const ProfileScreen())),
                   const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
