@@ -2,11 +2,13 @@ import 'package:fake_store_flutter/common/widgets/custom_shapes/container/rounde
 import 'package:fake_store_flutter/common/widgets/icon/t_circular_icon.dart';
 import 'package:fake_store_flutter/common/widgets/images/rounded_image.dart';
 import 'package:fake_store_flutter/common/widgets/texts/product_title_text.dart';
+import 'package:fake_store_flutter/features/shop/screens/product_details/product_details.dart';
 import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:fake_store_flutter/utils/constants/image_strings.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:fake_store_flutter/utils/helpers/helper_funcion.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../texts/brand_title_text_with_veried_icon.dart';
@@ -19,7 +21,7 @@ class ProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(() => const ProductDetailScreen()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),

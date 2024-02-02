@@ -8,10 +8,10 @@ class TImages {
   static const String facebook = "assets/logos/facebook-icon.png";
 
   static const String youtubeIcon = "assets/icons/youtube-icon.png";
+  static const String shoeIcon = "assets/icons/shoeIcon.png";
 
   // user
   static const String user = "assets/images/user/user.png";
-
 
   static const String imageProductCard1 = 'assets/images/image-1.png';
   static const String imageProductCard2 = 'assets/images/image-2.png';
