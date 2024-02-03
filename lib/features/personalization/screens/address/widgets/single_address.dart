@@ -3,7 +3,6 @@ import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:fake_store_flutter/utils/helpers/helper_funcion.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SingleAddress extends StatelessWidget {
@@ -49,9 +48,17 @@ class SingleAddress extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleLarge,
               ),
               const SizedBox(height: TSizes.sm / 2),
-              const Text('+39 1234565784', maxLines: 1, overflow: TextOverflow.ellipsis,),
+              const Text(
+                '+39 1234565784',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
               const SizedBox(height: TSizes.sm / 2),
-              const Text('12345 Via McDonald 17, Caserta, Italia', maxLines: 1, overflow: TextOverflow.ellipsis,),
+              const Text(
+                '12345 Via McDonald 17, Caserta, Italia',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
             ],
           )
         ],
