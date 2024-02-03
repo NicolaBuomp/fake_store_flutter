@@ -3,6 +3,7 @@ import 'package:fake_store_flutter/common/widgets/custom_shapes/container/primar
 import 'package:fake_store_flutter/common/widgets/list_tile/settings_menu_tile.dart';
 import 'package:fake_store_flutter/common/widgets/list_tile/user_profile_tile.dart';
 import 'package:fake_store_flutter/common/widgets/texts/section_heading.dart';
+import 'package:fake_store_flutter/features/personalization/screens/address/address.dart';
 import 'package:fake_store_flutter/features/personalization/screens/profile/profile.dart';
 import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:fake_store_flutter/utils/constants/image_strings.dart';
@@ -33,7 +34,7 @@ class SettingsScreen extends StatelessWidget {
                       title: 'Nicola Buompane',
                       subtitle: 'nicolabuompane.dev@gmail.com',
                       image: TImages.user,
-                  onPressed: () => Get.to(() => const ProfileScreen())),
+                      onPressed: () => Get.to(() => const ProfileScreen())),
                   const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
@@ -44,26 +45,98 @@ class SettingsScreen extends StatelessWidget {
               padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
-                  const TSectionHeading(title: 'Impostazioni Account', showActionButton: false,),
-                  const SizedBox(height: TSizes.spaceBtwItems,),
-
-                  SettingsMenuTile(icon: Iconsax.safe_home, title: 'Indirizzo', subtitle: 'Imposta il tuo indirizzo di spedizione', onTap: (){},),
-                  SettingsMenuTile(icon: Iconsax.shopping_cart, title: 'Carrello', subtitle: 'Imposta il tuo indirizzo di spedizione', onTap: (){},),
-                  SettingsMenuTile(icon: Iconsax.bag_tick, title: 'Ordini', subtitle: 'Imposta il tuo indirizzo di spedizione', onTap: (){},),
-                  SettingsMenuTile(icon: Iconsax.bank, title: 'Pagamenti', subtitle: 'Imposta il tuo indirizzo di spedizione', onTap: (){},),
-                  SettingsMenuTile(icon: Iconsax.discount_shape, title: 'Sconti', subtitle: 'Imposta il tuo indirizzo di spedizione', onTap: (){},),
-                  SettingsMenuTile(icon: Iconsax.notification, title: 'Notifiche', subtitle: 'Imposta il tuo indirizzo di spedizione', onTap: (){},),
-                  SettingsMenuTile(icon: Iconsax.security_card, title: 'Privacy', subtitle: 'Imposta il tuo indirizzo di spedizione', onTap: (){},),
-
-                  const SizedBox(height: TSizes.spaceBtwSections,),
-                  const TSectionHeading(title: 'Impostazioni app', showActionButton: false,),
-                  const SizedBox(height: TSizes.spaceBtwItems,),
-
-                  SettingsMenuTile(icon: Iconsax.document_upload, title: 'Firebase', subtitle: 'Carica i dati di Firebase', onTap: (){},),
-                  SettingsMenuTile(icon: Iconsax.location, title: 'Localizzazione', subtitle: 'Abilita la localizzazionie', trailing: Switch(value: true, onChanged: (value) {},),),
-                  SettingsMenuTile(icon: Iconsax.security_user, title: 'Safe Mode', subtitle: 'Abilita Safe Mode', trailing: Switch(value: true, onChanged: (value) {},),),
-                  SettingsMenuTile(icon: Iconsax.location, title: 'HD Image Quality', subtitle: 'Abilita le immagini in HD', trailing: Switch(value: true, onChanged: (value) {},),),
-
+                  const TSectionHeading(
+                    title: 'Impostazioni Account',
+                    showActionButton: false,
+                  ),
+                  const SizedBox(
+                    height: TSizes.spaceBtwItems,
+                  ),
+                  SettingsMenuTile(
+                    icon: Iconsax.safe_home,
+                    title: 'Indirizzo',
+                    subtitle: 'Imposta il tuo indirizzo di spedizione',
+                    onTap: () => Get.to(() => const UserAddressScreen()),
+                  ),
+                  SettingsMenuTile(
+                    icon: Iconsax.shopping_cart,
+                    title: 'Carrello',
+                    subtitle: 'Imposta il tuo indirizzo di spedizione',
+                    onTap: () {},
+                  ),
+                  SettingsMenuTile(
+                    icon: Iconsax.bag_tick,
+                    title: 'Ordini',
+                    subtitle: 'Imposta il tuo indirizzo di spedizione',
+                    onTap: () {},
+                  ),
+                  SettingsMenuTile(
+                    icon: Iconsax.bank,
+                    title: 'Pagamenti',
+                    subtitle: 'Imposta il tuo indirizzo di spedizione',
+                    onTap: () {},
+                  ),
+                  SettingsMenuTile(
+                    icon: Iconsax.discount_shape,
+                    title: 'Sconti',
+                    subtitle: 'Imposta il tuo indirizzo di spedizione',
+                    onTap: () {},
+                  ),
+                  SettingsMenuTile(
+                    icon: Iconsax.notification,
+                    title: 'Notifiche',
+                    subtitle: 'Imposta il tuo indirizzo di spedizione',
+                    onTap: () {},
+                  ),
+                  SettingsMenuTile(
+                    icon: Iconsax.security_card,
+                    title: 'Privacy',
+                    subtitle: 'Imposta il tuo indirizzo di spedizione',
+                    onTap: () {},
+                  ),
+                  const SizedBox(
+                    height: TSizes.spaceBtwSections,
+                  ),
+                  const TSectionHeading(
+                    title: 'Impostazioni app',
+                    showActionButton: false,
+                  ),
+                  const SizedBox(
+                    height: TSizes.spaceBtwItems,
+                  ),
+                  SettingsMenuTile(
+                    icon: Iconsax.document_upload,
+                    title: 'Firebase',
+                    subtitle: 'Carica i dati di Firebase',
+                    onTap: () {},
+                  ),
+                  SettingsMenuTile(
+                    icon: Iconsax.location,
+                    title: 'Localizzazione',
+                    subtitle: 'Abilita la localizzazionie',
+                    trailing: Switch(
+                      value: true,
+                      onChanged: (value) {},
+                    ),
+                  ),
+                  SettingsMenuTile(
+                    icon: Iconsax.security_user,
+                    title: 'Safe Mode',
+                    subtitle: 'Abilita Safe Mode',
+                    trailing: Switch(
+                      value: true,
+                      onChanged: (value) {},
+                    ),
+                  ),
+                  SettingsMenuTile(
+                    icon: Iconsax.location,
+                    title: 'HD Image Quality',
+                    subtitle: 'Abilita le immagini in HD',
+                    trailing: Switch(
+                      value: true,
+                      onChanged: (value) {},
+                    ),
+                  ),
                 ],
               ),
             ),
