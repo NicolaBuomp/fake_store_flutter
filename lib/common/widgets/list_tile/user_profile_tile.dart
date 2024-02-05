@@ -1,4 +1,4 @@
-import 'package:fake_store_flutter/common/widgets/images/t_circular_image.dart';
+import 'package:fake_store_flutter/common/widgets/images/circular_image.dart';
 import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
@@ -20,7 +20,7 @@ class UserProfileTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: TCircularImage(
+      leading: CircularImage(
         image: image,
         width: 50,
         height: 50,

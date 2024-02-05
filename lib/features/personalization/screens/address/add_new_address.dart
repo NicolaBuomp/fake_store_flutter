@@ -9,12 +9,12 @@ class AddNewAddressScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TAppBar(
+      appBar: const MyAppBar(
         showBackArrow: true,
         title: Text('Crea nuovo Indirizzo'),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(TSizes.defaultSpace),
+        padding: EdgeInsets.all(Sizes.defaultSpace),
         child: Form(
             child: Column(
           children: [
@@ -23,7 +23,7 @@ class AddNewAddressScreen extends StatelessWidget {
                   prefixIcon: Icon(Iconsax.user), labelText: 'Nome'),
             ),
             const SizedBox(
-              height: TSizes.spaceBtwInputFields,
+              height: Sizes.spaceBtwInputFields,
             ),
             TextFormField(
               decoration: const InputDecoration(
@@ -31,7 +31,7 @@ class AddNewAddressScreen extends StatelessWidget {
                   labelText: 'Numero di telefono'),
             ),
             const SizedBox(
-              height: TSizes.spaceBtwInputFields,
+              height: Sizes.spaceBtwInputFields,
             ),
             Row(
               children: [
@@ -43,7 +43,7 @@ class AddNewAddressScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  width: TSizes.spaceBtwInputFields,
+                  width: Sizes.spaceBtwInputFields,
                 ),
                 Expanded(
                   child: TextFormField(
@@ -55,7 +55,7 @@ class AddNewAddressScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: TSizes.spaceBtwInputFields,
+              height: Sizes.spaceBtwInputFields,
             ),
             Row(
               children: [
@@ -66,7 +66,7 @@ class AddNewAddressScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  width: TSizes.spaceBtwInputFields,
+                  width: Sizes.spaceBtwInputFields,
                 ),
                 Expanded(
                   child: TextFormField(
@@ -77,7 +77,7 @@ class AddNewAddressScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: TSizes.spaceBtwInputFields,
+              height: Sizes.spaceBtwInputFields,
             ),
             TextFormField(
               decoration: const InputDecoration(
@@ -85,7 +85,7 @@ class AddNewAddressScreen extends StatelessWidget {
                   labelText: 'Stato'),
             ),
             const SizedBox(
-              height: TSizes.spaceBtwInputFields,
+              height: Sizes.spaceBtwInputFields,
             ),
             SizedBox(
               width: double.infinity,

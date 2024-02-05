@@ -3,12 +3,12 @@ import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:fake_store_flutter/utils/helpers/helper_funcion.dart';
 import 'package:flutter/material.dart';
 
-class TCircularIcon extends StatelessWidget {
-  const TCircularIcon({
+class CircularIcon extends StatelessWidget {
+  const CircularIcon({
     super.key,
     this.width,
     this.height,
-    this.size = TSizes.lg,
+    this.size = Sizes.lg,
     required this.icon,
     this.color,
     this.backgroudColor,

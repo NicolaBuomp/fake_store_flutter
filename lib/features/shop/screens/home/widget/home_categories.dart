@@ -15,7 +15,7 @@ class THomeCategories extends StatelessWidget {
         itemCount: 6,
         scrollDirection: Axis.horizontal,
         itemBuilder: (_, index) {
-          return TVerticalImageText(
+          return VerticalImageText(
             title: 'Item Item',
             onTap: () {},
           );

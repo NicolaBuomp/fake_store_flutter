@@ -25,7 +25,7 @@ class VerifyEmailScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
           child: Padding(
-        padding: const EdgeInsets.all(TSizes.defaultSpace),
+        padding: const EdgeInsets.all(Sizes.defaultSpace),
         child: Column(
           children: [
             Image(
@@ -33,7 +33,7 @@ class VerifyEmailScreen extends StatelessWidget {
               width: THelperFunctions.screenWidth() * 0.6,
             ),
             const SizedBox(
-              height: TSizes.spaceBtwSections,
+              height: Sizes.spaceBtwSections,
             ),
             Text(
               TTexts.confirmEmail,
@@ -41,7 +41,7 @@ class VerifyEmailScreen extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(
-              height: TSizes.spaceBtwItems,
+              height: Sizes.spaceBtwItems,
             ),
             Text(
               TTexts.confirmEmailSubTitle,
@@ -49,7 +49,7 @@ class VerifyEmailScreen extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(
-              height: TSizes.spaceBtwSections,
+              height: Sizes.spaceBtwSections,
             ),
             SizedBox(
               width: double.infinity,
@@ -66,7 +66,7 @@ class VerifyEmailScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: TSizes.spaceBtwItems,
+              height: Sizes.spaceBtwItems,
             ),
             SizedBox(
               width: double.infinity,

@@ -21,47 +21,47 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const TPrimaryHeaderContainer(
+            const PrimaryHeaderContainer(
               child: Column(
                 children: [
                   // Appbar
                   THomeAppBar(),
 
                   SizedBox(
-                    height: TSizes.spaceBtwSections,
+                    height: Sizes.spaceBtwSections,
                   ),
 
                   // Searchbar
-                  TSearchContainer(
+                  SearchContainer(
                     text: 'Search in Store',
                   ),
                   SizedBox(
-                    height: TSizes.spaceBtwSections,
+                    height: Sizes.spaceBtwSections,
                   ),
 
                   // Categories
                   Padding(
-                    padding: EdgeInsets.only(left: TSizes.defaultSpace),
+                    padding: EdgeInsets.only(left: Sizes.defaultSpace),
                     child: Column(children: [
-                      TSectionHeading(
+                      SectionHeading(
                         title: 'Popular Categories',
                         showActionButton: false,
                         textColor: TColors.white,
                       ),
                       SizedBox(
-                        height: TSizes.spaceBtwItems,
+                        height: Sizes.spaceBtwItems,
                       ),
                       THomeCategories()
                     ]),
                   ),
 
-                  SizedBox(height: TSizes.spaceBtwSections),
+                  SizedBox(height: Sizes.spaceBtwSections),
                 ],
               ),
             ),
             // Body
             Padding(
-              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              padding: const EdgeInsets.all(Sizes.defaultSpace),
               child: Column(
                 children: [
                   const TPromoSlider(
@@ -72,14 +72,14 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: TSizes.spaceBtwSections,
+                    height: Sizes.spaceBtwSections,
                   ),
 
-                  TSectionHeading(title: 'Popular Products', onPressed: (){},),
+                  SectionHeading(title: 'Popular Products', onPressed: (){},),
                   const SizedBox(
-                    height: TSizes.spaceBtwItems,
+                    height: Sizes.spaceBtwItems,
                   ),
-                  TGridLayout(
+                  GridLayout(
                       itemCount: 2,
                       itemBuilder: (_, index) => const ProductCardVertical())
                 ],

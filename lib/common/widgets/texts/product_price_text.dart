@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TProductPriceText extends StatelessWidget {
-  const TProductPriceText({
+class ProductPriceText extends StatelessWidget {
+  const ProductPriceText({
     super.key,
     this.currencySign = '\$',
     required this.price,

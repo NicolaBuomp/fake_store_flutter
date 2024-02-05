@@ -20,7 +20,7 @@ class RatingAndShare extends StatelessWidget {
               size: 24,
             ),
             const SizedBox(
-              width: TSizes.spaceBtwItems / 2,
+              width: Sizes.spaceBtwItems / 2,
             ),
             Text.rich(
               TextSpan(
@@ -38,7 +38,7 @@ class RatingAndShare extends StatelessWidget {
             onPressed: () {},
             icon: const Icon(
               Icons.share,
-              size: TSizes.iconMd,
+              size: Sizes.iconMd,
             ))
       ],
     );

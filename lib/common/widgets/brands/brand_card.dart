@@ -6,11 +6,11 @@ import '../../../utils/constants/image_strings.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/helpers/helper_funcion.dart';
 import '../custom_shapes/container/rounded_container.dart';
-import '../images/t_circular_image.dart';
+import '../images/circular_image.dart';
 import '../texts/brand_title_text_with_veried_icon.dart';
 
-class TBrandCard extends StatelessWidget {
-  const TBrandCard({
+class BrandCard extends StatelessWidget {
+  const BrandCard({
     super.key, required this.showBorder, this.onTap,
   });
 
@@ -21,14 +21,14 @@ class TBrandCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: TRoundedContainer(
-        padding: const EdgeInsets.all(TSizes.sm),
+      child: RoundedContainer(
+        padding: const EdgeInsets.all(Sizes.sm),
         showBorder: showBorder,
         backgroundColor: Colors.transparent,
         child: Row(
           children: [
             Flexible(
-              child: TCircularImage(
+              child: CircularImage(
                 isNetworkImage: false,
                 image: TImages.nike,
                 backgroundColor: Colors.transparent,
@@ -38,7 +38,7 @@ class TBrandCard extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              width: TSizes.spaceBtwItems / 2,
+              width: Sizes.spaceBtwItems / 2,
             ),
             Expanded(
               child: Column(

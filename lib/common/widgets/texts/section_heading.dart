@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TSectionHeading extends StatelessWidget {
-  const TSectionHeading({
+class SectionHeading extends StatelessWidget {
+  const SectionHeading({
     super.key,
     this.textColor,
     this.showActionButton = true,

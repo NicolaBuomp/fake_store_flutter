@@ -11,7 +11,7 @@ class THomeAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TAppBar(
+    return MyAppBar(
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -28,7 +28,7 @@ class THomeAppBar extends StatelessWidget {
         ],
       ),
       actions: [
-        TCartCounterIcon(
+        CartCounterIcon(
           onPress: () {},
         ),
       ],

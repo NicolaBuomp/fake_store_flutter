@@ -26,7 +26,7 @@ class TPromoSlider extends StatelessWidget {
             onPageChanged: (index, _) => controller.updatepageIndicator(index),
           ),
           items: banners
-              .map((url) => TRoundedImage(
+              .map((url) => RoundedImage(
                     imageUrl: url,
                     isNetworkImage: false,
                     backgroundColor: null,
@@ -34,7 +34,7 @@ class TPromoSlider extends StatelessWidget {
               .toList(),
         ),
         const SizedBox(
-          height: TSizes.spaceBtwItems,
+          height: Sizes.spaceBtwItems,
         ),
         Center(
           child: Obx(
@@ -42,7 +42,7 @@ class TPromoSlider extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 for (int i = 0; i < banners.length; i++)
-                  TCircularContainer(
+                  CircularContainer(
                     width: 20,
                     height: 4,
                     margin: const EdgeInsets.only(right: 10),

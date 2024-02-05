@@ -21,22 +21,22 @@ class UserReviwCard extends StatelessWidget {
             Row(
               children: [
                 const CircleAvatar(backgroundImage: AssetImage(TImages.user)),
-                const SizedBox(width: TSizes.spaceBtwItems),
+                const SizedBox(width: Sizes.spaceBtwItems),
                 Text('Nix', style: Theme.of(context).textTheme.titleLarge),
               ],
             ),
             IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
           ],
         ),
-        const SizedBox(height: TSizes.spaceBtwItems),
+        const SizedBox(height: Sizes.spaceBtwItems),
         Row(
           children: [
             const MyRatingBarIndicator(rating: 4),
-            const SizedBox(width: TSizes.spaceBtwItems),
+            const SizedBox(width: Sizes.spaceBtwItems),
             Text('01 Nov 2023', style: Theme.of(context).textTheme.bodyMedium)
           ],
         ),
-        const SizedBox(height: TSizes.spaceBtwItems),
+        const SizedBox(height: Sizes.spaceBtwItems),
         const ReadMoreText(
           'This is the description of the section heading for the section heading for the section heading for the section heading for the section heading for the section',
           trimLines: 1,
@@ -52,11 +52,11 @@ class UserReviwCard extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: TColors.primary),
         ),
-        const SizedBox(height: TSizes.spaceBtwItems),
-        TRoundedContainer(
+        const SizedBox(height: Sizes.spaceBtwItems),
+        RoundedContainer(
           backgroundColor: isDark ? TColors.darkerGrey : TColors.grey,
           child: Padding(
-            padding: const EdgeInsets.all(TSizes.md),
+            padding: const EdgeInsets.all(Sizes.md),
             child: Column(
               children: [
                 Row(
@@ -68,7 +68,7 @@ class UserReviwCard extends StatelessWidget {
                         style: Theme.of(context).textTheme.bodyMedium),
                   ],
                 ),
-                const SizedBox(height: TSizes.spaceBtwItems),
+                const SizedBox(height: Sizes.spaceBtwItems),
                 const ReadMoreText(
                   'This is the description of the section heading for the section heading for the section heading for the section heading for the section heading for the section',
                   trimLines: 2,
@@ -88,7 +88,7 @@ class UserReviwCard extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: TSizes.spaceBtwSections),
+        const SizedBox(height: Sizes.spaceBtwSections),
       ],
     );
   }

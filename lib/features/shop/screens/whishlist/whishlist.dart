@@ -1,5 +1,5 @@
 import 'package:fake_store_flutter/common/widgets/appbar/appbar.dart';
-import 'package:fake_store_flutter/common/widgets/icon/t_circular_icon.dart';
+import 'package:fake_store_flutter/common/widgets/icon/circular_icon.dart';
 import 'package:fake_store_flutter/common/widgets/layouts/grid_layout.dart';
 import 'package:fake_store_flutter/common/widgets/products/products_card/product_card_vertical.dart';
 import 'package:fake_store_flutter/features/shop/screens/home/home.dart';
@@ -14,16 +14,16 @@ class FavoriteScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TAppBar(
+      appBar: MyAppBar(
         title: Text('Whishlist', style: Theme.of(context).textTheme.headlineMedium,),
         actions: [
-          TCircularIcon(icon: Iconsax.add, onPress: () => Get.to(const HomeScreen()),)
+          CircularIcon(icon: Iconsax.add, onPress: () => Get.to(const HomeScreen()),)
         ],
       ),
       body: SingleChildScrollView(
-        child: Padding(padding: const EdgeInsets.all(TSizes.defaultSpace), child: Column(
+        child: Padding(padding: const EdgeInsets.all(Sizes.defaultSpace), child: Column(
           children: [
-            TGridLayout(itemCount: 4, itemBuilder: (_, index) => const ProductCardVertical())
+            GridLayout(itemCount: 4, itemBuilder: (_, index) => const ProductCardVertical())
           ],
         ),),
       )

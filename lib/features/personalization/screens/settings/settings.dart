@@ -21,10 +21,10 @@ class SettingsScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TPrimaryHeaderContainer(
+            PrimaryHeaderContainer(
               child: Column(
                 children: [
-                  TAppBar(
+                  MyAppBar(
                       title: Text('Account',
                           style: Theme.of(context)
                               .textTheme
@@ -36,21 +36,21 @@ class SettingsScreen extends StatelessWidget {
                       image: TImages.user,
                       onPressed: () => Get.to(() => const ProfileScreen())),
                   const SizedBox(
-                    height: TSizes.spaceBtwSections,
+                    height: Sizes.spaceBtwSections,
                   ),
                 ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              padding: const EdgeInsets.all(Sizes.defaultSpace),
               child: Column(
                 children: [
-                  const TSectionHeading(
+                  const SectionHeading(
                     title: 'Impostazioni Account',
                     showActionButton: false,
                   ),
                   const SizedBox(
-                    height: TSizes.spaceBtwItems,
+                    height: Sizes.spaceBtwItems,
                   ),
                   SettingsMenuTile(
                     icon: Iconsax.safe_home,
@@ -95,14 +95,14 @@ class SettingsScreen extends StatelessWidget {
                     onTap: () {},
                   ),
                   const SizedBox(
-                    height: TSizes.spaceBtwSections,
+                    height: Sizes.spaceBtwSections,
                   ),
-                  const TSectionHeading(
+                  const SectionHeading(
                     title: 'Impostazioni app',
                     showActionButton: false,
                   ),
                   const SizedBox(
-                    height: TSizes.spaceBtwItems,
+                    height: Sizes.spaceBtwItems,
                   ),
                   SettingsMenuTile(
                     icon: Iconsax.document_upload,

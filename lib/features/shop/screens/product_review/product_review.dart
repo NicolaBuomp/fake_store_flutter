@@ -11,24 +11,24 @@ class ProductReviewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const TAppBar(
+      appBar: const MyAppBar(
         title: Text('Reviews & Rating'),
         showBackArrow: true,
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(TSizes.defaultSpace),
+        padding: const EdgeInsets.all(Sizes.defaultSpace),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
                 'Lorem ipsum dolor sit amet, consectetur adip nonum soc tempor inv soc et dolore magna aliqu sapien et dolore magna aliqu'),
-            const SizedBox(height: TSizes.spaceBtwItems),
+            const SizedBox(height: Sizes.spaceBtwItems),
             const OverallProductRating(),
             const MyRatingBarIndicator(
               rating: 2,
             ),
             Text('12.234', style: Theme.of(context).textTheme.bodySmall),
-            const SizedBox(height: TSizes.spaceBtwSections),
+            const SizedBox(height: Sizes.spaceBtwSections),
             const UserReviwCard(),
             const UserReviwCard()
           ],

@@ -1,8 +1,8 @@
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
-class TGridLayout extends StatelessWidget {
-  const TGridLayout({
+class GridLayout extends StatelessWidget {
+  const GridLayout({
     super.key,
     required this.itemCount,
     this.mainAxisExtent = 288,
@@ -23,8 +23,8 @@ class TGridLayout extends StatelessWidget {
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         mainAxisExtent: mainAxisExtent,
-        mainAxisSpacing: TSizes.gridViewSpacing,
-        crossAxisSpacing: TSizes.gridViewSpacing,
+        mainAxisSpacing: Sizes.gridViewSpacing,
+        crossAxisSpacing: Sizes.gridViewSpacing,
       ),
       itemBuilder: itemBuilder,
     );

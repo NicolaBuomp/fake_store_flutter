@@ -30,7 +30,7 @@ class SignupForm extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                width: TSizes.spaceBtwInputFields,
+                width: Sizes.spaceBtwInputFields,
               ),
               Expanded(
                 child: TextFormField(
@@ -43,7 +43,7 @@ class SignupForm extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: TSizes.spaceBtwInputFields,
+            height: Sizes.spaceBtwInputFields,
           ),
           TextFormField(
             expands: false,
@@ -52,21 +52,21 @@ class SignupForm extends StatelessWidget {
                 prefixIcon: Icon(Iconsax.user_edit)),
           ),
           const SizedBox(
-            height: TSizes.spaceBtwInputFields,
+            height: Sizes.spaceBtwInputFields,
           ),
           TextFormField(
             decoration: const InputDecoration(
                 labelText: TTexts.email, prefixIcon: Icon(Iconsax.direct)),
           ),
           const SizedBox(
-            height: TSizes.spaceBtwInputFields,
+            height: Sizes.spaceBtwInputFields,
           ),
           TextFormField(
             decoration: const InputDecoration(
                 labelText: TTexts.phoneNo, prefixIcon: Icon(Iconsax.call)),
           ),
           const SizedBox(
-            height: TSizes.spaceBtwInputFields,
+            height: Sizes.spaceBtwInputFields,
           ),
           TextFormField(
             obscureText: true,
@@ -76,11 +76,11 @@ class SignupForm extends StatelessWidget {
                 suffixIcon: Icon(Iconsax.eye_slash)),
           ),
           const SizedBox(
-            height: TSizes.spaceBtwSections,
+            height: Sizes.spaceBtwSections,
           ),
           TermsAndConditionCheckbox(isDark: isDark),
           const SizedBox(
-            height: TSizes.spaceBtwSections,
+            height: Sizes.spaceBtwSections,
           ),
           SizedBox(
             width: double.infinity,

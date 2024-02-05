@@ -1,6 +1,6 @@
 import 'package:fake_store_flutter/common/widgets/appbar/appbar.dart';
 import 'package:fake_store_flutter/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
-import 'package:fake_store_flutter/common/widgets/icon/t_circular_icon.dart';
+import 'package:fake_store_flutter/common/widgets/icon/circular_icon.dart';
 import 'package:fake_store_flutter/common/widgets/images/rounded_image.dart';
 import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:fake_store_flutter/utils/constants/image_strings.dart';
@@ -17,7 +17,7 @@ class ProductImageSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = THelperFunctions.isDarkMode(context);
-    return TCurvedEdgeWidget(
+    return CurvedEdgeWidget(
       child: Container(
         color: isDark ? TColors.darkerGrey : TColors.light,
         child: Stack(
@@ -25,15 +25,15 @@ class ProductImageSlider extends StatelessWidget {
             const SizedBox(
                 height: 400,
                 child: Padding(
-                  padding: EdgeInsets.all(TSizes.productImageRadius * 2),
+                  padding: EdgeInsets.all(Sizes.productImageRadius * 2),
                   child: Center(
                       child:
                           Image(image: AssetImage(TImages.imageProductCard3))),
                 )),
             Positioned(
-              right: TSizes.defaultSpace,
+              right: Sizes.defaultSpace,
               bottom: 30,
-              left: TSizes.defaultSpace,
+              left: Sizes.defaultSpace,
               child: SizedBox(
                 height: 80,
                 child: ListView.separated(
@@ -42,21 +42,21 @@ class ProductImageSlider extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   physics: const AlwaysScrollableScrollPhysics(),
                   separatorBuilder: (_, __) => const SizedBox(
-                    width: TSizes.spaceBtwItems,
+                    width: Sizes.spaceBtwItems,
                   ),
-                  itemBuilder: (_, index) => TRoundedImage(
+                  itemBuilder: (_, index) => RoundedImage(
                     width: 80,
                     border: Border.all(color: TColors.primary),
-                    padding: const EdgeInsets.all(TSizes.sm),
+                    padding: const EdgeInsets.all(Sizes.sm),
                     backgroundColor: isDark ? TColors.dark : TColors.white,
                     imageUrl: TImages.imageProductCard2,
                   ),
                 ),
               ),
             ),
-            const TAppBar(
+            const MyAppBar(
               showBackArrow: true,
-              actions: [TCircularIcon(icon: Iconsax.heart5, color: Colors.red)],
+              actions: [CircularIcon(icon: Iconsax.heart5, color: Colors.red)],
             )
           ],
         ),

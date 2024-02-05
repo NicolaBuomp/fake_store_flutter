@@ -24,7 +24,7 @@ class TermsAndConditionCheckbox extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          width: TSizes.spaceBtwItems,
+          width: Sizes.spaceBtwItems,
         ),
         Flexible(
           child: Text.rich(

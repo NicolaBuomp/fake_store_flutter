@@ -28,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                 dividerText: TTexts.orSignInWith.capitalize!,
               ),
               const SizedBox(
-                height: TSizes.spaceBtwSections,
+                height: Sizes.spaceBtwSections,
               ),
               const SocialButtons()
             ],

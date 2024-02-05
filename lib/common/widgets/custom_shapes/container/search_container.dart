@@ -5,15 +5,15 @@ import 'package:fake_store_flutter/utils/helpers/helper_funcion.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-class TSearchContainer extends StatelessWidget {
-  const TSearchContainer({
+class SearchContainer extends StatelessWidget {
+  const SearchContainer({
     super.key,
     required this.text,
     this.icon = Iconsax.search_normal,
     this.showBackground = true,
     this.showBorder = true,
     this.onTap,
-    this.padding = const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace)
+    this.padding = const EdgeInsets.symmetric(horizontal: Sizes.defaultSpace)
   });
 
   final String text;
@@ -31,14 +31,14 @@ class TSearchContainer extends StatelessWidget {
         padding: padding,
         child: Container(
           width: TDeviceUtils.getScreenWidth(context),
-          padding: const EdgeInsets.all(TSizes.md),
+          padding: const EdgeInsets.all(Sizes.md),
           decoration: BoxDecoration(
             color: showBackground
                 ? isDark
                     ? TColors.dark
                     : TColors.light
                 : Colors.transparent,
-            borderRadius: BorderRadius.circular(TSizes.cardRadiusLg),
+            borderRadius: BorderRadius.circular(Sizes.cardRadiusLg),
             border: showBorder ? Border.all(color: TColors.grey) : null,
           ),
           child: Row(
@@ -48,7 +48,7 @@ class TSearchContainer extends StatelessWidget {
                 color: isDark ? TColors.darkGrey : TColors.grey,
               ),
               const SizedBox(
-                width: TSizes.spaceBtwItems,
+                width: Sizes.spaceBtwItems,
               ),
               Text(
                 text,

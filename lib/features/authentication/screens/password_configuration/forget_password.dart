@@ -15,19 +15,19 @@ class ForgetPassword extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.all(TSizes.defaultSpace),
+        padding: const EdgeInsets.all(Sizes.defaultSpace),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(TTexts.forgetPasswordTitle,
                 style: Theme.of(context).textTheme.headlineMedium),
             const SizedBox(
-              height: TSizes.spaceBtwItems,
+              height: Sizes.spaceBtwItems,
             ),
             Text(TTexts.forgetPasswordSubTitle,
                 style: Theme.of(context).textTheme.labelMedium),
             const SizedBox(
-              height: TSizes.spaceBtwSections * 2,
+              height: Sizes.spaceBtwSections * 2,
             ),
             TextFormField(
               decoration: const InputDecoration(
@@ -35,7 +35,7 @@ class ForgetPassword extends StatelessWidget {
                   prefixIcon: Icon(Iconsax.direct_right)),
             ),
             const SizedBox(
-              height: TSizes.spaceBtwSections,
+              height: Sizes.spaceBtwSections,
             ),
             SizedBox(
               width: double.infinity,

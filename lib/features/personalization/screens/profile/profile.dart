@@ -1,5 +1,5 @@
 import 'package:fake_store_flutter/common/widgets/appbar/appbar.dart';
-import 'package:fake_store_flutter/common/widgets/images/t_circular_image.dart';
+import 'package:fake_store_flutter/common/widgets/images/circular_image.dart';
 import 'package:fake_store_flutter/common/widgets/texts/section_heading.dart';
 import 'package:fake_store_flutter/features/personalization/screens/profile/widgets/profile_menu.dart';
 import 'package:fake_store_flutter/utils/constants/image_strings.dart';
@@ -13,20 +13,20 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const TAppBar(
+      appBar: const MyAppBar(
         showBackArrow: true,
         title: Text('Profilo'),
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(Sizes.defaultSpace),
           child: Column(
             children: [
               SizedBox(
                 width: double.infinity,
                 child: Column(
                   children: [
-                    const TCircularImage(
+                    const CircularImage(
                       image: TImages.user,
                       width: 80,
                       height: 80,
@@ -38,28 +38,28 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: TSizes.spaceBtwItems / 2,
+                height: Sizes.spaceBtwItems / 2,
               ),
               const Divider(),
-              const SizedBox(height: TSizes.spaceBtwItems),
-              const TSectionHeading(
+              const SizedBox(height: Sizes.spaceBtwItems),
+              const SectionHeading(
                 title: 'Informazioni profilo',
                 showActionButton: false,
               ),
-              const SizedBox(height: TSizes.spaceBtwItems),
+              const SizedBox(height: Sizes.spaceBtwItems),
               ProfileMenu(
                   title: 'Nome', value: 'Nicola Buompane', onPressed: () {}),
               ProfileMenu(title: 'Username', value: 'Nix', onPressed: () {}),
               const SizedBox(
-                height: TSizes.spaceBtwItems,
+                height: Sizes.spaceBtwItems,
               ),
               const Divider(),
-              const SizedBox(height: TSizes.spaceBtwItems),
-              const TSectionHeading(
+              const SizedBox(height: Sizes.spaceBtwItems),
+              const SectionHeading(
                 title: 'Informazioni personali',
                 showActionButton: false,
               ),
-              const SizedBox(height: TSizes.spaceBtwItems),
+              const SizedBox(height: Sizes.spaceBtwItems),
               ProfileMenu(
                   title: 'User ID',
                   value: '346295',
@@ -79,7 +79,7 @@ class ProfileScreen extends StatelessWidget {
                   value: '29/10/1996',
                   onPressed: () {}),
               const Divider(),
-              const SizedBox(height: TSizes.spaceBtwItems),
+              const SizedBox(height: Sizes.spaceBtwItems),
               Center(
                 child: TextButton(
                   onPressed: () {},

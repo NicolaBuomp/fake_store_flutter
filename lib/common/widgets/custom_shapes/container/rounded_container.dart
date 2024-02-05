@@ -2,12 +2,12 @@ import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
-class TRoundedContainer extends StatelessWidget {
-  const TRoundedContainer(
+class RoundedContainer extends StatelessWidget {
+  const RoundedContainer(
       {super.key,
       this.width,
       this.height,
-      this.radius = TSizes.cardRadiusLg,
+      this.radius = Sizes.cardRadiusLg,
       this.child,
       this.showBorder = false,
       this.borderColor = TColors.borderPrimary,

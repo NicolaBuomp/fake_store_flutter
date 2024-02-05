@@ -1,8 +1,8 @@
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:flutter/cupertino.dart';
 
-class TCircularImage extends StatelessWidget {
-  const TCircularImage({
+class CircularImage extends StatelessWidget {
+  const CircularImage({
     super.key,
     this.fit = BoxFit.cover,
     required this.image,
@@ -11,7 +11,7 @@ class TCircularImage extends StatelessWidget {
     this.backgroundColor,
      this.width = 56,
      this.height = 56,
-    this.padding = TSizes.sm,
+    this.padding = Sizes.sm,
   });
 
   final BoxFit? fit;

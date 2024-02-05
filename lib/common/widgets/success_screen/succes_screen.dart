@@ -28,7 +28,7 @@ class SuccessScreen extends StatelessWidget {
               width: THelperFunctions.screenWidth() * 0.6,
             ),
             const SizedBox(
-              height: TSizes.spaceBtwSections,
+              height: Sizes.spaceBtwSections,
             ),
             Text(
               title,
@@ -36,7 +36,7 @@ class SuccessScreen extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(
-              height: TSizes.spaceBtwItems,
+              height: Sizes.spaceBtwItems,
             ),
             Text(
               subtitle,
@@ -44,7 +44,7 @@ class SuccessScreen extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(
-              height: TSizes.spaceBtwSections,
+              height: Sizes.spaceBtwSections,
             ),
             SizedBox(
               width: double.infinity,

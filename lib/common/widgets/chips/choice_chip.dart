@@ -3,8 +3,8 @@ import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:fake_store_flutter/utils/helpers/helper_funcion.dart';
 import 'package:flutter/material.dart';
 
-class CustomChoiceChip extends StatelessWidget {
-  const CustomChoiceChip(
+class MyChoiceChip extends StatelessWidget {
+  const MyChoiceChip(
       {super.key, required this.text, required this.selected, this.onSelected});
 
   final String text;
@@ -22,7 +22,7 @@ class CustomChoiceChip extends StatelessWidget {
         onSelected: onSelected,
         labelStyle: TextStyle(color: selected ? TColors.white : null),
         avatar: isColor
-            ? TCircularContainer(
+            ? CircularContainer(
                 width: 50,
                 height: 50,
                 backgroundColor: THelperFunctions.getColor(text)!)

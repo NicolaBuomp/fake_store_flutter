@@ -27,9 +27,9 @@ class ProductDetailScreen extends StatelessWidget {
             // 2 - Product details
             Padding(
               padding: const EdgeInsets.only(
-                  right: TSizes.defaultSpace,
-                  left: TSizes.defaultSpace,
-                  bottom: TSizes.defaultSpace),
+                  right: Sizes.defaultSpace,
+                  left: Sizes.defaultSpace,
+                  bottom: Sizes.defaultSpace),
               child: Column(
                 children: [
                   // Recensioni
@@ -40,7 +40,7 @@ class ProductDetailScreen extends StatelessWidget {
 
                   // Colore / Taglia
                   const ProductAttributes(),
-                  const SizedBox(height: TSizes.spaceBtwSections),
+                  const SizedBox(height: Sizes.spaceBtwSections),
 
                   // Checkout
                   SizedBox(
@@ -48,13 +48,13 @@ class ProductDetailScreen extends StatelessWidget {
                     child: ElevatedButton(
                         onPressed: () {}, child: const Text('Checkout')),
                   ),
-                  const SizedBox(height: TSizes.spaceBtwSections),
+                  const SizedBox(height: Sizes.spaceBtwSections),
 
-                  const TSectionHeading(
+                  const SectionHeading(
                     title: 'Description',
                     showActionButton: false,
                   ),
-                  const SizedBox(height: TSizes.spaceBtwItems),
+                  const SizedBox(height: Sizes.spaceBtwItems),
                   const ReadMoreText(
                     'This is the description of the section heading for the section heading for the section heading for the section heading for the section heading for the section',
                     trimLines: 2,
@@ -68,12 +68,12 @@ class ProductDetailScreen extends StatelessWidget {
                   ),
                   const Divider(),
                   const SizedBox(
-                    height: TSizes.spaceBtwItems,
+                    height: Sizes.spaceBtwItems,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const TSectionHeading(
+                      const SectionHeading(
                         title: 'Review (199)',
                         showActionButton: false,
                       ),
@@ -87,7 +87,7 @@ class ProductDetailScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: TSizes.spaceBtwSections,
+                    height: Sizes.spaceBtwSections,
                   )
                 ],
               ),

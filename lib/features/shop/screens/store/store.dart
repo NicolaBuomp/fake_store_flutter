@@ -21,11 +21,11 @@ class StoreScreen extends StatelessWidget {
     return DefaultTabController(
       length: 5,
       child: Scaffold(
-        appBar: TAppBar(
+        appBar: MyAppBar(
           title:
               Text('Store', style: Theme.of(context).textTheme.headlineMedium),
           actions: [
-            TCartCounterIcon(
+            CartCounterIcon(
                 onPress: () {},
                 iconColor: isDark ? TColors.white : TColors.black),
           ],
@@ -42,33 +42,33 @@ class StoreScreen extends StatelessWidget {
                     : TColors.white,
                 expandedHeight: 440,
                 flexibleSpace: Padding(
-                  padding: const EdgeInsets.all(TSizes.defaultSpace),
+                  padding: const EdgeInsets.all(Sizes.defaultSpace),
                   child: ListView(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
                       const SizedBox(
-                        height: TSizes.spaceBtwItems,
+                        height: Sizes.spaceBtwItems,
                       ),
-                      const TSearchContainer(
+                      const SearchContainer(
                         text: 'Search in Store',
                         showBorder: true,
                         showBackground: false,
                         padding: EdgeInsets.zero,
                       ),
                       const SizedBox(
-                        height: TSizes.spaceBtwSections,
+                        height: Sizes.spaceBtwSections,
                       ),
-                      TSectionHeading(
+                      SectionHeading(
                           title: 'Featured Brands', onPressed: () {}),
                       const SizedBox(
-                        height: TSizes.spaceBtwItems / 1.5,
+                        height: Sizes.spaceBtwItems / 1.5,
                       ),
-                      TGridLayout(
+                      GridLayout(
                         itemCount: 4,
                         mainAxisExtent: 80,
                         itemBuilder: (_, index) {
-                          return const TBrandCard(
+                          return const BrandCard(
                             showBorder: true,
                           );
                         },

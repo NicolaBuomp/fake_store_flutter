@@ -4,8 +4,8 @@ import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:fake_store_flutter/utils/helpers/helper_funcion.dart';
 import 'package:flutter/material.dart';
 
-class TVerticalImageText extends StatelessWidget {
-  const TVerticalImageText({
+class VerticalImageText extends StatelessWidget {
+  const VerticalImageText({
     super.key,
     this.image = TImages.youtubeIcon,
     required this.title,
@@ -24,13 +24,13 @@ class TVerticalImageText extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.only(right: TSizes.spaceBtwItems),
+        padding: const EdgeInsets.only(right: Sizes.spaceBtwItems),
         child: Column(
           children: [
             Container(
               width: 56,
               height: 56,
-              padding: const EdgeInsets.all(TSizes.md),
+              padding: const EdgeInsets.all(Sizes.md),
               decoration: BoxDecoration(
                 color: backgroundColor ??
                     (THelperFunctions.isDarkMode(context)
@@ -50,7 +50,7 @@ class TVerticalImageText extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: TSizes.spaceBtwItems / 2,
+              height: Sizes.spaceBtwItems / 2,
             ),
             SizedBox(
               width: 55,

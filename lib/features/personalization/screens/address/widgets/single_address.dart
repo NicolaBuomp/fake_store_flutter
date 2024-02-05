@@ -12,8 +12,8 @@ class SingleAddress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = THelperFunctions.isDarkMode(context);
-    return TRoundedContainer(
-      padding: const EdgeInsets.all(TSizes.md),
+    return RoundedContainer(
+      padding: const EdgeInsets.all(Sizes.md),
       width: double.infinity,
       showBorder: true,
       backgroundColor: selectedAddress
@@ -24,7 +24,7 @@ class SingleAddress extends StatelessWidget {
           : isDark
               ? TColors.darkerGrey
               : TColors.grey,
-      margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
+      margin: const EdgeInsets.only(bottom: Sizes.spaceBtwItems),
       child: Stack(
         children: [
           Positioned(
@@ -47,13 +47,13 @@ class SingleAddress extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.titleLarge,
               ),
-              const SizedBox(height: TSizes.sm / 2),
+              const SizedBox(height: Sizes.sm / 2),
               const Text(
                 '+39 1234565784',
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
-              const SizedBox(height: TSizes.sm / 2),
+              const SizedBox(height: Sizes.sm / 2),
               const Text(
                 '12345 Via McDonald 17, Caserta, Italia',
                 maxLines: 1,

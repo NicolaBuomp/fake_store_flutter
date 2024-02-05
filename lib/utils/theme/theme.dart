@@ -10,8 +10,8 @@ import 'package:flutter/material.dart';
 
 import '../constants/colors.dart';
 
-class TAppTheme {
-  TAppTheme._();
+class MyAppTheme {
+  MyAppTheme._();
 
   static ThemeData lightTheme = ThemeData(
       useMaterial3: true,
@@ -20,8 +20,8 @@ class TAppTheme {
       primaryColor: Colors.blue,
       textTheme: TTextTheme.lightTextTheme,
       chipTheme: TChipTheme.lightChipTheme,
-      scaffoldBackgroundColor: TColors.light,
-      appBarTheme: TAppBarTheme.lightAppBarTheme,
+      scaffoldBackgroundColor: TColors.backgroundLight,
+      appBarTheme: MyAppBarTheme.lightAppBarTheme,
       checkboxTheme: TCheckboxTheme.lightCheckboxTheme,
       bottomSheetTheme: TBottomSheetTheme.lightBottomSheetTheme,
       elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
@@ -34,8 +34,8 @@ class TAppTheme {
       primaryColor: Colors.blue,
       textTheme: TTextTheme.darkTextTheme,
       chipTheme: TChipTheme.darkChipTheme,
-      scaffoldBackgroundColor: TColors.black,
-      appBarTheme: TAppBarTheme.darkAppBarTheme,
+      scaffoldBackgroundColor: TColors.backgroundDark,
+      appBarTheme: MyAppBarTheme.darkAppBarTheme,
       checkboxTheme: TCheckboxTheme.darkCheckboxTheme,
       bottomSheetTheme: TBottomSheetTheme.darkBottomSheetTheme,
       elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,

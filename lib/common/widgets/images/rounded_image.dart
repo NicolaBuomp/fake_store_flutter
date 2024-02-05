@@ -1,8 +1,8 @@
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
-class TRoundedImage extends StatelessWidget {
-  const TRoundedImage({
+class RoundedImage extends StatelessWidget {
+  const RoundedImage({
     super.key,
     this.border,
     this.padding,
@@ -14,7 +14,7 @@ class TRoundedImage extends StatelessWidget {
     this.fit = BoxFit.contain,
     required this.backgroundColor,
     this.isNetworkImage = false,
-    this.borderRadius = TSizes.md,
+    this.borderRadius = Sizes.md,
   });
 
   final double? width, height;

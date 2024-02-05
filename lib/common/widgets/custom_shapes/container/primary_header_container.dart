@@ -3,8 +3,8 @@ import 'package:fake_store_flutter/common/widgets/custom_shapes/curved_edges/cur
 import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
-class TPrimaryHeaderContainer extends StatelessWidget {
-  const TPrimaryHeaderContainer({
+class PrimaryHeaderContainer extends StatelessWidget {
+  const PrimaryHeaderContainer({
     super.key,
     required this.child,
   });
@@ -13,7 +13,7 @@ class TPrimaryHeaderContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TCurvedEdgeWidget(
+    return CurvedEdgeWidget(
       child: Container(
         color: TColors.primary,
         child: Stack(
@@ -21,14 +21,14 @@ class TPrimaryHeaderContainer extends StatelessWidget {
             Positioned(
               top: -150,
               right: -250,
-              child: TCircularContainer(
+              child: CircularContainer(
                 backgroundColor: TColors.white.withOpacity(0.1),
               ),
             ),
             Positioned(
               top: 100,
               right: -300,
-              child: TCircularContainer(
+              child: CircularContainer(
                 backgroundColor: TColors.white.withOpacity(0.1),
               ),
             ),

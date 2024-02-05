@@ -17,19 +17,19 @@ class ProductAttributes extends StatelessWidget {
 
     return Column(
       children: [
-        TRoundedContainer(
-          padding: const EdgeInsets.all(TSizes.md),
+        RoundedContainer(
+          padding: const EdgeInsets.all(Sizes.md),
           backgroundColor: isDark ? TColors.darkerGrey : TColors.grey,
           child: Column(
             children: [
               Row(
                 children: [
-                  const TSectionHeading(
+                  const SectionHeading(
                     title: 'Variant',
                     showActionButton: false,
                   ),
                   const SizedBox(
-                    width: TSizes.spaceBtwItems,
+                    width: Sizes.spaceBtwItems,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,9 +48,9 @@ class ProductAttributes extends StatelessWidget {
                                 .apply(decoration: TextDecoration.lineThrough),
                           ),
                           const SizedBox(
-                            width: TSizes.spaceBtwItems,
+                            width: Sizes.spaceBtwItems,
                           ),
-                          const TProductPriceText(price: '20'),
+                          const ProductPriceText(price: '20'),
                         ],
                       ),
                       Row(
@@ -79,26 +79,26 @@ class ProductAttributes extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: TSizes.spaceBtwItems,
+          height: Sizes.spaceBtwItems,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const TSectionHeading(
+            const SectionHeading(
               title: 'Colors',
               showActionButton: false,
             ),
             const SizedBox(
-              height: TSizes.spaceBtwItems / 2,
+              height: Sizes.spaceBtwItems / 2,
             ),
             Wrap(
               spacing: 8,
               children: [
-                CustomChoiceChip(
+                MyChoiceChip(
                     text: 'Green', selected: true, onSelected: (value) {}),
-                CustomChoiceChip(
+                MyChoiceChip(
                     text: 'Blue', selected: false, onSelected: (value) {}),
-                CustomChoiceChip(
+                MyChoiceChip(
                     text: 'Yellow', selected: false, onSelected: (value) {}),
               ],
             )
@@ -107,21 +107,21 @@ class ProductAttributes extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const TSectionHeading(
+            const SectionHeading(
               title: 'Size',
               showActionButton: false,
             ),
             const SizedBox(
-              height: TSizes.spaceBtwItems / 2,
+              height: Sizes.spaceBtwItems / 2,
             ),
             Wrap(
               spacing: 8,
               children: [
-                CustomChoiceChip(
+                MyChoiceChip(
                     text: 'EU 40', selected: true, onSelected: (value) {}),
-                CustomChoiceChip(
+                MyChoiceChip(
                     text: 'EU 41', selected: false, onSelected: (value) {}),
-                CustomChoiceChip(
+                MyChoiceChip(
                     text: 'EU 42', selected: false, onSelected: (value) {}),
               ],
             )

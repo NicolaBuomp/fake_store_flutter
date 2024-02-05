@@ -21,7 +21,7 @@ class UserAddressScreen extends StatelessWidget {
           color: TColors.white,
         ),
       ),
-      appBar: TAppBar(
+      appBar: MyAppBar(
           showBackArrow: true,
           title: Text(
             'Indirizzi',
@@ -29,7 +29,7 @@ class UserAddressScreen extends StatelessWidget {
           )),
       body: const SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: EdgeInsets.all(Sizes.defaultSpace),
           child: Column(
             children: [
               SingleAddress(selectedAddress: true),

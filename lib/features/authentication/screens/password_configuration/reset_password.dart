@@ -24,7 +24,7 @@ class ResetPassword extends StatelessWidget {
       ),
       body: SingleChildScrollView(
           child: Padding(
-        padding: const EdgeInsets.all(TSizes.defaultSpace),
+        padding: const EdgeInsets.all(Sizes.defaultSpace),
         child: Column(
           children: [
             Image(
@@ -32,7 +32,7 @@ class ResetPassword extends StatelessWidget {
               width: THelperFunctions.screenWidth() * 0.6,
             ),
             const SizedBox(
-              height: TSizes.spaceBtwSections,
+              height: Sizes.spaceBtwSections,
             ),
             Text(
               TTexts.changeYourPasswordTitle,
@@ -40,7 +40,7 @@ class ResetPassword extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(
-              height: TSizes.spaceBtwItems,
+              height: Sizes.spaceBtwItems,
             ),
             Text(
               TTexts.changeYourPasswordSubTitle,
@@ -48,7 +48,7 @@ class ResetPassword extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(
-              height: TSizes.spaceBtwSections,
+              height: Sizes.spaceBtwSections,
             ),
             SizedBox(
               width: double.infinity,
@@ -58,7 +58,7 @@ class ResetPassword extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: TSizes.spaceBtwItems,
+              height: Sizes.spaceBtwItems,
             ),
             SizedBox(
               width: double.infinity,

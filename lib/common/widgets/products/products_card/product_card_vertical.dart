@@ -1,5 +1,5 @@
 import 'package:fake_store_flutter/common/widgets/custom_shapes/container/rounded_container.dart';
-import 'package:fake_store_flutter/common/widgets/icon/t_circular_icon.dart';
+import 'package:fake_store_flutter/common/widgets/icon/circular_icon.dart';
 import 'package:fake_store_flutter/common/widgets/images/rounded_image.dart';
 import 'package:fake_store_flutter/common/widgets/texts/product_title_text.dart';
 import 'package:fake_store_flutter/features/shop/screens/product_details/product_details.dart';
@@ -26,18 +26,18 @@ class ProductCardVertical extends StatelessWidget {
         width: 180,
         padding: const EdgeInsets.all(1),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(TSizes.productImageRadius),
+            borderRadius: BorderRadius.circular(Sizes.productImageRadius),
             color: isDark ? TColors.darkerGrey : TColors.white),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            TRoundedContainer(
+            RoundedContainer(
               height: 180,
-              padding: const EdgeInsets.all(TSizes.sm),
+              padding: const EdgeInsets.all(Sizes.sm),
               backgroundColor: isDark ? TColors.dark : TColors.light,
               child: Stack(
                 children: [
-                  TRoundedImage(
+                  RoundedImage(
                     imageUrl: TImages.imageProductCard1,
                     applyImageRadius: true,
                     isNetworkImage: false,
@@ -46,11 +46,11 @@ class ProductCardVertical extends StatelessWidget {
                   Positioned(
                     top: 10,
                     left: 5,
-                    child: TRoundedContainer(
-                      radius: TSizes.sm,
+                    child: RoundedContainer(
+                      radius: Sizes.sm,
                       backgroundColor: TColors.secondary.withOpacity(0.8),
                       padding: const EdgeInsets.symmetric(
-                          horizontal: TSizes.sm, vertical: TSizes.xs),
+                          horizontal: Sizes.sm, vertical: Sizes.xs),
                       child: Text('25%',
                           style: Theme.of(context)
                               .textTheme
@@ -61,7 +61,7 @@ class ProductCardVertical extends StatelessWidget {
                   const Positioned(
                       top: 1,
                       right: 1,
-                      child: TCircularIcon(
+                      child: CircularIcon(
                         icon: Iconsax.heart5,
                         color: Colors.red,
                       ))
@@ -70,12 +70,12 @@ class ProductCardVertical extends StatelessWidget {
             ),
 
             const SizedBox(
-              height: TSizes.spaceBtwItems / 2,
+              height: Sizes.spaceBtwItems / 2,
             ),
             // Details Product
 
             const Padding(
-              padding: EdgeInsets.only(left: TSizes.sm),
+              padding: EdgeInsets.only(left: Sizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -84,7 +84,7 @@ class ProductCardVertical extends StatelessWidget {
                     smallSize: true,
                   ),
                   SizedBox(
-                    height: TSizes.spaceBtwItems / 2,
+                    height: Sizes.spaceBtwItems / 2,
                   ),
                   BrandTitleWithVerifiedIcon(
                     title: 'Nike',
@@ -98,20 +98,20 @@ class ProductCardVertical extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Padding(
-                  padding: EdgeInsets.only(left: TSizes.sm),
-                  child: TProductPriceText(price: '35.50', isLarge: true),
+                  padding: EdgeInsets.only(left: Sizes.sm),
+                  child: ProductPriceText(price: '35.50', isLarge: true),
                 ),
                 Container(
                   decoration: const BoxDecoration(
                     color: TColors.dark,
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(TSizes.cardRadiusMd),
-                      bottomRight: Radius.circular(TSizes.productImageRadius),
+                      topLeft: Radius.circular(Sizes.cardRadiusMd),
+                      bottomRight: Radius.circular(Sizes.productImageRadius),
                     ),
                   ),
                   child: const SizedBox(
-                    width: TSizes.iconLg * 1.2,
-                    height: TSizes.iconLg * 1.2,
+                    width: Sizes.iconLg * 1.2,
+                    height: Sizes.iconLg * 1.2,
                     child: Center(
                       child: Icon(
                         Iconsax.add,
