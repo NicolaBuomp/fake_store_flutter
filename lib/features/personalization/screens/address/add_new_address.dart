@@ -14,7 +14,7 @@ class AddNewAddressScreen extends StatelessWidget {
         title: Text('Crea nuovo Indirizzo'),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(Sizes.defaultSpace),
+        padding: const EdgeInsets.all(Sizes.defaultSpace),
         child: Form(
             child: Column(
           children: [
@@ -91,7 +91,7 @@ class AddNewAddressScreen extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {},
-                child: Text('Salva'),
+                child: const Text('Salva'),
               ),
             ),
           ],

@@ -13,18 +13,19 @@ class CartItem extends StatelessWidget {
     super.key,
   });
 
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         RoundedImage(
-            imageUrl: TImages.imageProductCard1,
+            imageUrl: MyImages.imageProductCard1,
             width: 60,
             height: 60,
             padding: const EdgeInsets.all(Sizes.sm),
-            backgroundColor: THelperFunctions.isDarkMode(context)
-                ? TColors.darkerGrey
-                : TColors.light),
+            backgroundColor: HelperFunctions.isDarkMode(context)
+                ? MyColors.darkerGrey
+                : MyColors.light),
         const SizedBox(width: Sizes.spaceBtwItems),
         Expanded(
           child: Column(

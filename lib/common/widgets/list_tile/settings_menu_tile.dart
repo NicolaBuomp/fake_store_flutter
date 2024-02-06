@@ -20,7 +20,7 @@ class SettingsMenuTile extends StatelessWidget {
       leading: Icon(
         icon,
         size: 20,
-        color: TColors.primary,
+        color: MyColors.primary,
       ),
       title: Text(title, style: Theme.of(context).textTheme.titleMedium),
       subtitle: Text(subtitle, style: Theme.of(context).textTheme.labelMedium),

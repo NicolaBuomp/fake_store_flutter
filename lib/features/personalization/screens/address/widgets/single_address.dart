@@ -11,19 +11,19 @@ class SingleAddress extends StatelessWidget {
   final bool selectedAddress;
   @override
   Widget build(BuildContext context) {
-    final isDark = THelperFunctions.isDarkMode(context);
+    final isDark = HelperFunctions.isDarkMode(context);
     return RoundedContainer(
       padding: const EdgeInsets.all(Sizes.md),
       width: double.infinity,
       showBorder: true,
       backgroundColor: selectedAddress
-          ? TColors.primary.withOpacity(0.5)
+          ? MyColors.primary.withOpacity(0.5)
           : Colors.transparent,
       borderColor: selectedAddress
           ? Colors.transparent
           : isDark
-              ? TColors.darkerGrey
-              : TColors.grey,
+              ? MyColors.darkerGrey
+              : MyColors.grey,
       margin: const EdgeInsets.only(bottom: Sizes.spaceBtwItems),
       child: Stack(
         children: [
@@ -34,8 +34,8 @@ class SingleAddress extends StatelessWidget {
                 selectedAddress ? Iconsax.tick_circle5 : null,
                 color: selectedAddress
                     ? isDark
-                        ? TColors.light
-                        : TColors.dark
+                        ? MyColors.light
+                        : MyColors.dark
                     : null,
               )),
           Column(

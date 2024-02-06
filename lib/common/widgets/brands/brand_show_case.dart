@@ -15,7 +15,7 @@ class BrandShowcase extends StatelessWidget {
   Widget build(BuildContext context) {
     return RoundedContainer(
       showBorder: true,
-      borderColor: TColors.darkGrey,
+      borderColor: MyColors.darkGrey,
       backgroundColor: Colors.transparent,
       padding: const EdgeInsets.all(Sizes.md),
       margin:
@@ -37,9 +37,9 @@ Widget brandTopProductImageWidget(String image, context) {
     child: RoundedContainer(
       height: 100,
       backgroundColor:
-      THelperFunctions.isDarkMode(context)
-          ? TColors.darkerGrey
-          : TColors.light,
+      HelperFunctions.isDarkMode(context)
+          ? MyColors.darkerGrey
+          : MyColors.light,
       margin:
       const EdgeInsets.only(right: Sizes.sm),
       padding: const EdgeInsets.all(Sizes.md),

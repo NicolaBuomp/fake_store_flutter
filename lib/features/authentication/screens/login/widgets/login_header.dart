@@ -15,7 +15,7 @@ class LoginHeader extends StatelessWidget {
       children: [
         const Image(
           height: 150,
-          image: AssetImage(TImages.imageProductCard1),
+          image: AssetImage(MyImages.imageProductCard1),
         ),
         Text(TTexts.loginTitle,
             style: Theme.of(context).textTheme.headlineMedium),

@@ -22,9 +22,9 @@ class CategoryTab extends StatelessWidget {
             children: [
               const BrandShowcase(
                 images: [
-                  TImages.imageProductCard2,
-                  TImages.imageProductCard1,
-                  TImages.imageProductCard3
+                  MyImages.imageProductCard2,
+                  MyImages.imageProductCard1,
+                  MyImages.imageProductCard3
                 ],
               ),
               SectionHeading(

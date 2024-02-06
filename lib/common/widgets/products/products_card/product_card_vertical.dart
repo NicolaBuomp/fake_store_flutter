@@ -19,7 +19,7 @@ class ProductCardVertical extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = THelperFunctions.isDarkMode(context);
+    final isDark = HelperFunctions.isDarkMode(context);
     return GestureDetector(
       onTap: () => Get.to(() => const ProductDetailScreen()),
       child: Container(
@@ -27,35 +27,35 @@ class ProductCardVertical extends StatelessWidget {
         padding: const EdgeInsets.all(1),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(Sizes.productImageRadius),
-            color: isDark ? TColors.darkerGrey : TColors.white),
+            color: isDark ? MyColors.darkerGrey : MyColors.white),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             RoundedContainer(
               height: 180,
               padding: const EdgeInsets.all(Sizes.sm),
-              backgroundColor: isDark ? TColors.dark : TColors.light,
+              backgroundColor: isDark ? MyColors.dark : MyColors.light,
               child: Stack(
                 children: [
                   RoundedImage(
-                    imageUrl: TImages.imageProductCard1,
+                    imageUrl: MyImages.imageProductCard1,
                     applyImageRadius: true,
                     isNetworkImage: false,
-                    backgroundColor: isDark ? TColors.dark : TColors.light,
+                    backgroundColor: isDark ? MyColors.dark : MyColors.light,
                   ),
                   Positioned(
                     top: 10,
                     left: 5,
                     child: RoundedContainer(
                       radius: Sizes.sm,
-                      backgroundColor: TColors.secondary.withOpacity(0.8),
+                      backgroundColor: MyColors.secondary.withOpacity(0.8),
                       padding: const EdgeInsets.symmetric(
                           horizontal: Sizes.sm, vertical: Sizes.xs),
                       child: Text('25%',
                           style: Theme.of(context)
                               .textTheme
                               .labelLarge!
-                              .apply(color: TColors.black)),
+                              .apply(color: MyColors.black)),
                     ),
                   ),
                   const Positioned(
@@ -103,7 +103,7 @@ class ProductCardVertical extends StatelessWidget {
                 ),
                 Container(
                   decoration: const BoxDecoration(
-                    color: TColors.dark,
+                    color: MyColors.dark,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(Sizes.cardRadiusMd),
                       bottomRight: Radius.circular(Sizes.productImageRadius),
@@ -115,7 +115,7 @@ class ProductCardVertical extends StatelessWidget {
                     child: Center(
                       child: Icon(
                         Iconsax.add,
-                        color: TColors.white,
+                        color: MyColors.white,
                       ),
                     ),
                   ),

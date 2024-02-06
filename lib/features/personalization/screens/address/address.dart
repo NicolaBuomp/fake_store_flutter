@@ -14,11 +14,11 @@ class UserAddressScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        backgroundColor: TColors.primary,
+        backgroundColor: MyColors.primary,
         onPressed: () => Get.to(() => const AddNewAddressScreen()),
         child: const Icon(
           Iconsax.add,
-          color: TColors.white,
+          color: MyColors.white,
         ),
       ),
       appBar: MyAppBar(

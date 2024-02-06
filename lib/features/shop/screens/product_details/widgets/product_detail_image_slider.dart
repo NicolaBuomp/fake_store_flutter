@@ -16,10 +16,10 @@ class ProductImageSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = THelperFunctions.isDarkMode(context);
+    final isDark = HelperFunctions.isDarkMode(context);
     return CurvedEdgeWidget(
       child: Container(
-        color: isDark ? TColors.darkerGrey : TColors.light,
+        color: isDark ? MyColors.darkerGrey : MyColors.light,
         child: Stack(
           children: [
             const SizedBox(
@@ -28,7 +28,7 @@ class ProductImageSlider extends StatelessWidget {
                   padding: EdgeInsets.all(Sizes.productImageRadius * 2),
                   child: Center(
                       child:
-                          Image(image: AssetImage(TImages.imageProductCard3))),
+                          Image(image: AssetImage(MyImages.imageProductCard3))),
                 )),
             Positioned(
               right: Sizes.defaultSpace,
@@ -46,10 +46,10 @@ class ProductImageSlider extends StatelessWidget {
                   ),
                   itemBuilder: (_, index) => RoundedImage(
                     width: 80,
-                    border: Border.all(color: TColors.primary),
+                    border: Border.all(color: MyColors.primary),
                     padding: const EdgeInsets.all(Sizes.sm),
-                    backgroundColor: isDark ? TColors.dark : TColors.white,
-                    imageUrl: TImages.imageProductCard2,
+                    backgroundColor: isDark ? MyColors.dark : MyColors.white,
+                    imageUrl: MyImages.imageProductCard2,
                   ),
                 ),
               ),

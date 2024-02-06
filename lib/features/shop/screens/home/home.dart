@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                       SectionHeading(
                         title: 'Popular Categories',
                         showActionButton: false,
-                        textColor: TColors.white,
+                        textColor: MyColors.white,
                       ),
                       SizedBox(
                         height: Sizes.spaceBtwItems,
@@ -66,9 +66,9 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   const TPromoSlider(
                     banners: [
-                      TImages.imageBannerCard,
-                      TImages.imageBannerCard,
-                      TImages.imageBannerCard
+                      MyImages.imageBannerCard,
+                      MyImages.imageBannerCard,
+                      MyImages.imageBannerCard
                     ],
                   ),
                   const SizedBox(

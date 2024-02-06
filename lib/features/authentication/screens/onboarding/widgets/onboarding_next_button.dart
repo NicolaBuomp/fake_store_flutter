@@ -13,7 +13,7 @@ class OnBordingNextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = THelperFunctions.isDarkMode(context);
+    final isDark = HelperFunctions.isDarkMode(context);
     return Positioned(
         right: Sizes.defaultSpace,
         bottom: TDeviceUtils.getBottomNavigationBarHeight(),
@@ -21,7 +21,7 @@ class OnBordingNextButton extends StatelessWidget {
           onPressed: () => OnBoardingController.instance.nextPage(),
           style: ElevatedButton.styleFrom(
               shape: const CircleBorder(),
-              backgroundColor: isDark ? TColors.primary : Colors.black),
+              backgroundColor: isDark ? MyColors.primary : Colors.black),
           child: const Icon(Iconsax.arrow_right_3),
         ));
   }

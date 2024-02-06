@@ -22,12 +22,12 @@ class AddAndRemoveProductCart extends StatelessWidget {
           width: 32,
           height: 32,
           size: Sizes.md,
-          color: THelperFunctions.isDarkMode(context)
-              ? TColors.white
-              : TColors.black,
-          backgroudColor: THelperFunctions.isDarkMode(context)
-              ? TColors.darkerGrey
-              : TColors.light,
+          color: HelperFunctions.isDarkMode(context)
+              ? MyColors.white
+              : MyColors.black,
+          backgroudColor: HelperFunctions.isDarkMode(context)
+              ? MyColors.darkerGrey
+              : MyColors.light,
         ),
         const SizedBox(
           width: Sizes.spaceBtwItems,
@@ -44,8 +44,8 @@ class AddAndRemoveProductCart extends StatelessWidget {
           width: 32,
           height: 32,
           size: Sizes.md,
-          color: TColors.white,
-          backgroudColor: TColors.primary,
+          color: MyColors.white,
+          backgroudColor: MyColors.primary,
         ),
       ],
     );

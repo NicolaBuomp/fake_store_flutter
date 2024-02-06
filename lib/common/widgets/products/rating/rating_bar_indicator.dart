@@ -16,7 +16,7 @@ class MyRatingBarIndicator extends StatelessWidget {
         itemSize: 20,
         itemBuilder: (_, __) => const Icon(
               Iconsax.star1,
-              color: TColors.primary,
+              color: MyColors.primary,
             ));
   }
 }

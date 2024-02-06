@@ -30,11 +30,11 @@ class BrandCard extends StatelessWidget {
             Flexible(
               child: CircularImage(
                 isNetworkImage: false,
-                image: TImages.nike,
+                image: MyImages.nike,
                 backgroundColor: Colors.transparent,
-                overlayColor: THelperFunctions.isDarkMode(context)
-                    ? TColors.white
-                    : TColors.black,
+                overlayColor: HelperFunctions.isDarkMode(context)
+                    ? MyColors.white
+                    : MyColors.black,
               ),
             ),
             const SizedBox(

@@ -8,7 +8,7 @@ class CartCounterIcon extends StatelessWidget {
   const CartCounterIcon({
     super.key,
     required this.onPress,
-    this.iconColor = TColors.white,
+    this.iconColor = MyColors.white,
   });
 
   final VoidCallback onPress;
@@ -29,7 +29,7 @@ class CartCounterIcon extends StatelessWidget {
             width: 18,
             height: 18,
             decoration: BoxDecoration(
-              color: TColors.black,
+              color: MyColors.black,
               borderRadius: BorderRadius.circular(100),
             ),
             child: Center(
@@ -38,7 +38,7 @@ class CartCounterIcon extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .labelLarge!
-                    .apply(color: TColors.white, fontSizeFactor: 0.8),
+                    .apply(color: MyColors.white, fontSizeFactor: 0.8),
               ),
             ),
           ),

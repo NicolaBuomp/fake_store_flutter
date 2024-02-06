@@ -32,18 +32,18 @@ class UserProfileTile extends StatelessWidget {
         style: Theme.of(context)
             .textTheme
             .headlineSmall!
-            .apply(color: TColors.white),
+            .apply(color: MyColors.white),
       ),
       subtitle: Text(
         subtitle,
         style:
-            Theme.of(context).textTheme.bodyMedium!.apply(color: TColors.white),
+            Theme.of(context).textTheme.bodyMedium!.apply(color: MyColors.white),
       ),
       trailing: IconButton(
         onPressed: onPressed,
         icon: const Icon(
           Iconsax.edit,
-          color: TColors.white,
+          color: MyColors.white,
         ),
       ),
     );

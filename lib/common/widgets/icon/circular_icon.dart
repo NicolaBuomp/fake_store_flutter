@@ -23,7 +23,7 @@ class CircularIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = THelperFunctions.isDarkMode(context);
+    final isDark = HelperFunctions.isDarkMode(context);
     return Container(
       width: width,
       height: height,
@@ -31,8 +31,8 @@ class CircularIcon extends StatelessWidget {
         color: backgroudColor != null
             ? backgroudColor!
             : isDark
-                ? TColors.black.withOpacity(0.9)
-                : TColors.white.withOpacity(0.9),
+                ? MyColors.black.withOpacity(0.9)
+                : MyColors.white.withOpacity(0.9),
         borderRadius: BorderRadius.circular(100),
       ),
       child: IconButton(

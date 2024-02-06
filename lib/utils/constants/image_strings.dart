@@ -1,4 +1,4 @@
-class TImages {
+class MyImages {
   static const String darkAppLogo = "assets/logos";
   static const String lightAppLogo = "assets/logos";
   static const String nike = "assets/logos/nike-logo.png";
@@ -12,6 +12,13 @@ class TImages {
 
   // user
   static const String user = "assets/images/user/user.png";
+
+  // Payment methods
+  static const String applePay = "assets/icons/apple-pay.png";
+  static const String googlePay = "assets/icons/google-pay.png";
+  static const String vistaPay = "assets/icons/visa-pay.png";
+  static const String mastercardPay = "assets/icons/mastercard-pay.png";
+
 
   static const String imageProductCard1 = 'assets/images/image-1.png';
   static const String imageProductCard2 = 'assets/images/image-2.png';

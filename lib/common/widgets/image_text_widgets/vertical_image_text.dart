@@ -7,10 +7,10 @@ import 'package:flutter/material.dart';
 class VerticalImageText extends StatelessWidget {
   const VerticalImageText({
     super.key,
-    this.image = TImages.youtubeIcon,
+    this.image = MyImages.youtubeIcon,
     required this.title,
-    this.textColor = TColors.white,
-    this.backgroundColor = TColors.white,
+    this.textColor = MyColors.white,
+    this.backgroundColor = MyColors.white,
     this.onTap,
   });
 
@@ -33,9 +33,9 @@ class VerticalImageText extends StatelessWidget {
               padding: const EdgeInsets.all(Sizes.md),
               decoration: BoxDecoration(
                 color: backgroundColor ??
-                    (THelperFunctions.isDarkMode(context)
-                        ? TColors.black
-                        : TColors.white),
+                    (HelperFunctions.isDarkMode(context)
+                        ? MyColors.black
+                        : MyColors.white),
                 borderRadius: BorderRadius.circular(100),
               ),
               child: Center(
@@ -43,9 +43,9 @@ class VerticalImageText extends StatelessWidget {
                   // image: AssetImage(),
                   image: AssetImage(image),
                   fit: BoxFit.cover,
-                  color: (THelperFunctions.isDarkMode(context)
-                      ? TColors.black
-                      : TColors.white),
+                  color: (HelperFunctions.isDarkMode(context)
+                      ? MyColors.black
+                      : MyColors.white),
                 ),
               ),
             ),

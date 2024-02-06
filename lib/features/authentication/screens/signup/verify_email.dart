@@ -30,7 +30,7 @@ class VerifyEmailScreen extends StatelessWidget {
           children: [
             Image(
               image: const NetworkImage('https://picsum.photos/200/300'),
-              width: THelperFunctions.screenWidth() * 0.6,
+              width: HelperFunctions.screenWidth() * 0.6,
             ),
             const SizedBox(
               height: Sizes.spaceBtwSections,

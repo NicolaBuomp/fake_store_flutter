@@ -13,13 +13,13 @@ class ProductAttributes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = THelperFunctions.isDarkMode(context);
+    final isDark = HelperFunctions.isDarkMode(context);
 
     return Column(
       children: [
         RoundedContainer(
           padding: const EdgeInsets.all(Sizes.md),
-          backgroundColor: isDark ? TColors.darkerGrey : TColors.grey,
+          backgroundColor: isDark ? MyColors.darkerGrey : MyColors.grey,
           child: Column(
             children: [
               Row(

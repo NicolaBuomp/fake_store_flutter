@@ -5,6 +5,7 @@ import 'package:fake_store_flutter/common/widgets/list_tile/user_profile_tile.da
 import 'package:fake_store_flutter/common/widgets/texts/section_heading.dart';
 import 'package:fake_store_flutter/features/personalization/screens/address/address.dart';
 import 'package:fake_store_flutter/features/personalization/screens/profile/profile.dart';
+import 'package:fake_store_flutter/features/shop/screens/orders/orders.dart';
 import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:fake_store_flutter/utils/constants/image_strings.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
@@ -29,11 +30,11 @@ class SettingsScreen extends StatelessWidget {
                           style: Theme.of(context)
                               .textTheme
                               .headlineMedium!
-                              .apply(color: TColors.white))),
+                              .apply(color: MyColors.white))),
                   UserProfileTile(
                       title: 'Nicola Buompane',
                       subtitle: 'nicolabuompane.dev@gmail.com',
-                      image: TImages.user,
+                      image: MyImages.user,
                       onPressed: () => Get.to(() => const ProfileScreen())),
                   const SizedBox(
                     height: Sizes.spaceBtwSections,
@@ -68,7 +69,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.bag_tick,
                     title: 'Ordini',
                     subtitle: 'Imposta il tuo indirizzo di spedizione',
-                    onTap: () {},
+                    onTap: () => Get.to(() => const OrderScreen()),
                   ),
                   SettingsMenuTile(
                     icon: Iconsax.bank,

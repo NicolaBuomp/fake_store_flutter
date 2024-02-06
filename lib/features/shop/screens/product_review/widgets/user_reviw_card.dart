@@ -12,7 +12,7 @@ class UserReviwCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = THelperFunctions.isDarkMode(context);
+    final isDark = HelperFunctions.isDarkMode(context);
     return Column(
       children: [
         Row(
@@ -20,7 +20,7 @@ class UserReviwCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                const CircleAvatar(backgroundImage: AssetImage(TImages.user)),
+                const CircleAvatar(backgroundImage: AssetImage(MyImages.user)),
                 const SizedBox(width: Sizes.spaceBtwItems),
                 Text('Nix', style: Theme.of(context).textTheme.titleLarge),
               ],
@@ -46,15 +46,15 @@ class UserReviwCard extends StatelessWidget {
           moreStyle: TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.bold,
-              color: TColors.primary),
+              color: MyColors.primary),
           lessStyle: TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.bold,
-              color: TColors.primary),
+              color: MyColors.primary),
         ),
         const SizedBox(height: Sizes.spaceBtwItems),
         RoundedContainer(
-          backgroundColor: isDark ? TColors.darkerGrey : TColors.grey,
+          backgroundColor: isDark ? MyColors.darkerGrey : MyColors.grey,
           child: Padding(
             padding: const EdgeInsets.all(Sizes.md),
             child: Column(
@@ -78,11 +78,11 @@ class UserReviwCard extends StatelessWidget {
                   moreStyle: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: TColors.primary),
+                      color: MyColors.primary),
                   lessStyle: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
-                      color: TColors.primary),
+                      color: MyColors.primary),
                 ),
               ],
             ),

@@ -17,7 +17,7 @@ class StoreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = THelperFunctions.isDarkMode(context);
+    final isDark = HelperFunctions.isDarkMode(context);
     return DefaultTabController(
       length: 5,
       child: Scaffold(
@@ -27,7 +27,7 @@ class StoreScreen extends StatelessWidget {
           actions: [
             CartCounterIcon(
                 onPress: () {},
-                iconColor: isDark ? TColors.white : TColors.black),
+                iconColor: isDark ? MyColors.white : MyColors.black),
           ],
         ),
         body: NestedScrollView(
@@ -37,9 +37,9 @@ class StoreScreen extends StatelessWidget {
                 automaticallyImplyLeading: false,
                 pinned: true,
                 floating: true,
-                backgroundColor: THelperFunctions.isDarkMode(context)
-                    ? TColors.black
-                    : TColors.white,
+                backgroundColor: HelperFunctions.isDarkMode(context)
+                    ? MyColors.black
+                    : MyColors.white,
                 expandedHeight: 440,
                 flexibleSpace: Padding(
                   padding: const EdgeInsets.all(Sizes.defaultSpace),
