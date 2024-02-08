@@ -79,9 +79,27 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
+  // EMAIL VERIFICATION
   Future<void> sendEmailVerification() async {
     try {
       await _auth.currentUser?.sendEmailVerification();
+    } on FirebaseAuthException catch (e) {
+      print(e.code);
+    } on FirebaseException catch (e) {
+      print(e.code);
+    } on FormatException catch (_) {
+      print('Format Exeption');
+    } on PlatformException catch (e) {
+      print(e.code);
+    } catch (e) {
+      throw 'Errore generico, riprova!';
+    }
+  }
+
+// RESET PASSSWORD
+  Future<void> sendPasswordResetEmail(String email) async {
+    try {
+      await _auth.sendPasswordResetEmail(email: email);
     } on FirebaseAuthException catch (e) {
       print(e.code);
     } on FirebaseException catch (e) {
@@ -127,6 +145,7 @@ class AuthenticationRepository extends GetxController {
 //   Logout user
   Future<void> logout() async {
     try {
+      await GoogleSignIn().signOut();
       await FirebaseAuth.instance.signOut();
       Get.offAll(() => const LoginScreen());
     } on FirebaseAuthException catch (e) {
