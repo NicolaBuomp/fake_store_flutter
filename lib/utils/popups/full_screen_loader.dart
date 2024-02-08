@@ -5,45 +5,56 @@ import 'package:get/get.dart';
 
 class FullScreenLoader {
   static void openLoadingDialog(String text) {
-    showDialog(
-      context: Get.overlayContext!,
+    showGeneralDialog(
+      context: Get.context!,
+      barrierLabel:
+          MaterialLocalizations.of(Get.context!).modalBarrierDismissLabel,
       barrierDismissible: false,
-      builder: (_) => _FullScreenLoadingDialog(text: text),
-    );
-  }
-
-  static stopLoading() {
-    Navigator.of(Get.overlayContext!).pop();
-  }
-}
-
-class _FullScreenLoadingDialog extends StatelessWidget {
-  final String text;
-
-  const _FullScreenLoadingDialog({required this.text});
-
-  @override
-  Widget build(BuildContext context) {
-    return Dialog(
-      // Impostare il backgroundColor in modo che occupi l'intera schermata
-      backgroundColor: HelperFunctions.isDarkMode(Get.context!)
-          ? MyColors.dark
-          : MyColors.white,
-      elevation: 0,
-      child: Center(
-        child: SizedBox(
-          width: double.infinity,
-          height: double.infinity,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+      pageBuilder: (context, animation, secondaryAnimation) => Center(
+        child: Container(
+          color: HelperFunctions.isDarkMode(Get.context!)
+              ? MyColors.dark
+              : MyColors.white, // Semi-transparent overlay
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: Stack(
             children: [
-              const CircularProgressIndicator(),
-              const SizedBox(height: 16),
-              Text(text),
+              // Loader content with correct text alignment
+              Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const CircularProgressIndicator(),
+                    const SizedBox(height: 20),
+                    Text(
+                      text,
+                      textAlign: TextAlign.center,
+                      style: Theme.of(Get.context!).textTheme.headlineSmall,
+                    ),
+                  ],
+                ),
+              ),
+              // Optional background gradient
+              Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      Colors.black.withOpacity(0.3),
+                      Colors.black.withOpacity(0.0)
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  static stopLoading() {
+    Navigator.of(Get.overlayContext!).pop();
   }
 }
