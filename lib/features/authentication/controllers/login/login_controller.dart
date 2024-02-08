@@ -1,5 +1,6 @@
 import 'package:fake_store_flutter/common/widgets/loader/loaders.dart';
 import 'package:fake_store_flutter/data/repositories/authentication/authentication_repository.dart';
+import 'package:fake_store_flutter/features/personalization/controllers/user_controller.dart';
 import 'package:fake_store_flutter/utils/network/network_manager.dart';
 import 'package:fake_store_flutter/utils/popups/full_screen_loader.dart';
 import 'package:flutter/cupertino.dart';
@@ -13,6 +14,7 @@ class LoginController extends GetxController {
   final email = TextEditingController();
   final password = TextEditingController();
   GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
+  final userController = Get.put(UserController());
 
   @override
   void onInit() {
@@ -23,7 +25,7 @@ class LoginController extends GetxController {
 
   Future<void> emailAndPasswordSignIn() async {
     try {
-      FullScreenLoader.openLoadingDialog('Effettuando il ligin...');
+      FullScreenLoader.openLoadingDialog('Effettuando il login...');
 
       final isConnected = await NetworkManager.intance.isConnected();
       if (!isConnected) {
@@ -49,6 +51,31 @@ class LoginController extends GetxController {
       AuthenticationRepository.instance.screenRedirect();
     } catch (e) {
       FullScreenLoader.stopLoading();
+      Loaders.errorSnackBar(title: 'Errore', message: e.toString());
+    }
+  }
+
+  Future<void> googleSignIn() async {
+    try {
+      FullScreenLoader.openLoadingDialog('Effettuando il login con Google...');
+
+      final isConnected = await NetworkManager.intance.isConnected();
+      if (!isConnected) {
+        FullScreenLoader.stopLoading();
+        return;
+      }
+
+      final userCredentials =
+          await AuthenticationRepository.instance.signInWithGoogle();
+
+      await userController.saveUserRecord(userCredentials);
+
+      FullScreenLoader.stopLoading();
+
+      AuthenticationRepository.instance.screenRedirect();
+    } catch (e) {
+      FullScreenLoader.stopLoading();
+
       Loaders.errorSnackBar(title: 'Errore', message: e.toString());
     }
   }

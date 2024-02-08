@@ -14,12 +14,11 @@ class FullScreenLoader {
         child: Container(
           color: HelperFunctions.isDarkMode(Get.context!)
               ? MyColors.dark
-              : MyColors.white, // Semi-transparent overlay
+              : MyColors.white,
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Stack(
             children: [
-              // Loader content with correct text alignment
               Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -34,7 +33,6 @@ class FullScreenLoader {
                   ],
                 ),
               ),
-              // Optional background gradient
               Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(

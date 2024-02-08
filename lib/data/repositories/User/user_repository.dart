@@ -9,11 +9,8 @@ class UserRepository extends GetxController {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
 
   Future<void> saveUserRecord(UserModel user) async {
-    print(user.toJson());
     try {
       await _db.collection("users").doc(user.id).set(user.toJson());
-      print(user);
-      print(user.toJson());
     } on FirebaseException catch (e) {
       print(e.code);
     } on FormatException catch (e) {

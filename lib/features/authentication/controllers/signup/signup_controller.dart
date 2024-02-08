@@ -41,6 +41,7 @@ class SignupController extends GetxController {
             title: 'Accetta Privacy & Policy',
             message:
                 'In order to create account, you must have to read and accept the Privacy Policy & terms of Use');
+        FullScreenLoader.stopLoading();
         return;
       }
 
@@ -65,11 +66,11 @@ class SignupController extends GetxController {
           title: 'Congratulazioni',
           message: 'Account creato! Verifica l\'email per continuare.');
 
+      FullScreenLoader.stopLoading();
       Get.to(() => VerifyEmailScreen(email: email.text.trim()));
     } catch (e) {
-      Loaders.errorSnackBar(title: 'Errore', message: e.toString());
-    } finally {
       FullScreenLoader.stopLoading();
+      Loaders.errorSnackBar(title: 'Errore', message: e.toString());
     }
   }
 }

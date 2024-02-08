@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthenticationRepository extends GetxController {
   static AuthenticationRepository get instance => Get.find();
@@ -37,9 +38,11 @@ class AuthenticationRepository extends GetxController {
   }
 
 // Login with EMAIL
-  Future<UserCredential> loginWithEmailAncPassword(String email, String password) async {
+  Future<UserCredential> loginWithEmailAncPassword(
+      String email, String password) async {
     try {
-      return await _auth.signInWithEmailAndPassword(email: email, password: password);
+      return await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
     } on FirebaseAuthException catch (e) {
       print(e.code);
       rethrow; // Rilancia l'eccezione per essere gestita da chi chiama la funzione
@@ -57,7 +60,6 @@ class AuthenticationRepository extends GetxController {
       throw 'Errore generico, riprova!';
     }
   }
-
 
 //   SIGNUP EMAIL
   Future registerWithEmailAndPassword(String email, String password) async {
@@ -88,6 +90,35 @@ class AuthenticationRepository extends GetxController {
       print('Format Exeption');
     } on PlatformException catch (e) {
       print(e.code);
+    } catch (e) {
+      throw 'Errore generico, riprova!';
+    }
+  }
+
+  // Google Authentication
+  Future<UserCredential> signInWithGoogle() async {
+    try {
+      final GoogleSignInAccount? userAccount = await GoogleSignIn().signIn();
+
+      final GoogleSignInAuthentication? googleAuth =
+          await userAccount?.authentication;
+
+      final credentials = GoogleAuthProvider.credential(
+          accessToken: googleAuth?.accessToken, idToken: googleAuth?.idToken);
+
+      return await _auth.signInWithCredential(credentials);
+    } on FirebaseAuthException catch (e) {
+      print(e.code);
+      throw 'Errore generico, FirebaseAuthException!';
+    } on FirebaseException catch (e) {
+      print(e.code);
+      throw 'Errore generico, FirebaseException!';
+    } on FormatException catch (_) {
+      print('Format Exeption');
+      throw 'Errore generico, FormatException!';
+    } on PlatformException catch (e) {
+      print(e.code);
+      throw 'Errore generico, PlatformException!';
     } catch (e) {
       throw 'Errore generico, riprova!';
     }
