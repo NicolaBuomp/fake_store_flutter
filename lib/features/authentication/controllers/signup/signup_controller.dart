@@ -3,7 +3,6 @@ import 'package:fake_store_flutter/data/repositories/User/user_repository.dart';
 import 'package:fake_store_flutter/data/repositories/authentication/authentication_repository.dart';
 import 'package:fake_store_flutter/features/authentication/models/user_model.dart';
 import 'package:fake_store_flutter/features/authentication/screens/signup/verify_email.dart';
-import 'package:fake_store_flutter/utils/constants/image_strings.dart';
 import 'package:fake_store_flutter/utils/network/network_manager.dart';
 import 'package:fake_store_flutter/utils/popups/full_screen_loader.dart';
 import 'package:flutter/cupertino.dart';
@@ -24,8 +23,7 @@ class SignupController extends GetxController {
 
   Future<void> signUp() async {
     try {
-      FullScreenLoader.openLoadingDialog(
-          'Stiamo procesando i tuoi dati', MyImages.adidas);
+      FullScreenLoader.openLoadingDialog('Stiamo procesando i tuoi dati');
 
       final isConnected = await NetworkManager.intance.isConnected();
       if (!isConnected) {

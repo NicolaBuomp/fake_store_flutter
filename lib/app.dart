@@ -1,5 +1,4 @@
 import 'package:fake_store_flutter/bindings/general_bindings.dart';
-import 'package:fake_store_flutter/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:fake_store_flutter/utils/theme/theme.dart';
 import 'package:flutter/material.dart';

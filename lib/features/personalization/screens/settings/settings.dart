@@ -147,7 +147,7 @@ class SettingsScreen extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () =>
                           AuthenticationRepository.instance.logout(),
-                      child: Text('Logout'),
+                      child: const Text('Logout'),
                     ),
                   ),
                 ],

@@ -42,16 +42,16 @@ class AuthenticationRepository extends GetxController {
       return await _auth.signInWithEmailAndPassword(email: email, password: password);
     } on FirebaseAuthException catch (e) {
       print(e.code);
-      throw e; // Rilancia l'eccezione per essere gestita da chi chiama la funzione
+      rethrow; // Rilancia l'eccezione per essere gestita da chi chiama la funzione
     } on FirebaseException catch (e) {
       print(e.code);
-      throw e; // Rilancia l'eccezione per essere gestita da chi chiama la funzione
+      rethrow; // Rilancia l'eccezione per essere gestita da chi chiama la funzione
     } on FormatException catch (_) {
       print('Format Exception');
       throw 'Format Exception'; // Rilancia l'eccezione per essere gestita da chi chiama la funzione
     } on PlatformException catch (e) {
       print(e.code);
-      throw e; // Rilancia l'eccezione per essere gestita da chi chiama la funzione
+      rethrow; // Rilancia l'eccezione per essere gestita da chi chiama la funzione
     } catch (e) {
       print('Errore generico, riprova!');
       throw 'Errore generico, riprova!';

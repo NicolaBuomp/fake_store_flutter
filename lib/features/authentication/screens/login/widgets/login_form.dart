@@ -1,7 +1,6 @@
 import 'package:fake_store_flutter/features/authentication/controllers/login/login_controller.dart';
 import 'package:fake_store_flutter/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:fake_store_flutter/features/authentication/screens/signup/signup.dart';
-import 'package:fake_store_flutter/navigation_menu.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:fake_store_flutter/utils/constants/text_string.dart';
 import 'package:fake_store_flutter/utils/validators/validation.dart';

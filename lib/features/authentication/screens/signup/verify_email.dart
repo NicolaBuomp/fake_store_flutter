@@ -1,7 +1,5 @@
-import 'package:fake_store_flutter/common/widgets/success_screen/succes_screen.dart';
 import 'package:fake_store_flutter/data/repositories/authentication/authentication_repository.dart';
 import 'package:fake_store_flutter/features/authentication/controllers/signup/verify_email_controller.dart';
-import 'package:fake_store_flutter/features/authentication/screens/login/login.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:fake_store_flutter/utils/constants/text_string.dart';
 import 'package:fake_store_flutter/utils/helpers/helper_funcion.dart';

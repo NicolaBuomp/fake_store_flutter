@@ -3,6 +3,7 @@ class TValidator {
       if(value== null || value.isEmpty){
         return '$fieldName è obbligatorio';
       }
+      return null;
 }
 
   static String? validateEmail(String? value) {

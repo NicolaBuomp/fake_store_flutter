@@ -4,13 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 class AnimationLoaderWidget extends StatelessWidget {
-  const AnimationLoaderWidget(
-      {super.key,
-      required this.text,
-      required this.animation,
-      this.showAction = false,
-      this.actionText,
-      this.onActionPressed});
+  const AnimationLoaderWidget({
+    super.key,
+    required this.text,
+    required this.animation,
+    this.showAction = false,
+    this.actionText,
+    this.onActionPressed,
+  });
 
   final String text;
   final String animation;
@@ -27,9 +28,11 @@ class AnimationLoaderWidget extends StatelessWidget {
           Lottie.asset(animation,
               width: MediaQuery.of(context).size.width * 0.8),
           const SizedBox(height: Sizes.defaultSpace),
-          Text(
-            text,
-            style: Theme.of(context).textTheme.bodyMedium,
+          Expanded(
+            child: Text(
+              text,
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
           ),
           const SizedBox(height: Sizes.defaultSpace),
           showAction
@@ -38,7 +41,8 @@ class AnimationLoaderWidget extends StatelessWidget {
                   child: OutlinedButton(
                     onPressed: onActionPressed,
                     style: OutlinedButton.styleFrom(
-                        backgroundColor: MyColors.light),
+                      backgroundColor: MyColors.light,
+                    ),
                     child: Text(
                       actionText!,
                       style: Theme.of(context)
