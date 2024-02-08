@@ -3,6 +3,7 @@ import 'package:fake_store_flutter/common/widgets/custom_shapes/container/primar
 import 'package:fake_store_flutter/common/widgets/list_tile/settings_menu_tile.dart';
 import 'package:fake_store_flutter/common/widgets/list_tile/user_profile_tile.dart';
 import 'package:fake_store_flutter/common/widgets/texts/section_heading.dart';
+import 'package:fake_store_flutter/data/repositories/authentication/authentication_repository.dart';
 import 'package:fake_store_flutter/features/personalization/screens/address/address.dart';
 import 'package:fake_store_flutter/features/personalization/screens/profile/profile.dart';
 import 'package:fake_store_flutter/features/shop/screens/orders/orders.dart';
@@ -136,6 +137,17 @@ class SettingsScreen extends StatelessWidget {
                     trailing: Switch(
                       value: true,
                       onChanged: (value) {},
+                    ),
+                  ),
+                  const SizedBox(
+                    height: Sizes.spaceBtwItems,
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () =>
+                          AuthenticationRepository.instance.logout(),
+                      child: Text('Logout'),
                     ),
                   ),
                 ],

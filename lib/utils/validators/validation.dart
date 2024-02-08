@@ -1,4 +1,10 @@
 class TValidator {
+  static String? validateEmptyText(String? fieldName, String? value) {
+      if(value== null || value.isEmpty){
+        return '$fieldName è obbligatorio';
+      }
+}
+
   static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
       return 'Email is required.';
@@ -37,14 +43,14 @@ class TValidator {
 
   static String? validatePhoneNumber(String? value) {
     if (value == null || value.isEmpty) {
-      return ' Numberi di telefono obbligatorio.';
+      return 'Numberi di telefono obbligatorio.';
     }
 
-    final phonrRegExp = RegExp(r'^\d{10$}');
-
-    if (!phonrRegExp.hasMatch(value)) {
-      return 'Numero di telefono non valido.';
-    }
+    // final phonrRegExp = RegExp(r'^\d{10$}');
+    //
+    // if (!phonrRegExp.hasMatch(value)) {
+    //   return 'Numero di telefono non valido.';
+    // }
 
     return null;
   }

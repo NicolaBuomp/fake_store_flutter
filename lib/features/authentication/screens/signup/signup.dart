@@ -28,7 +28,7 @@ class SignupScreen extends StatelessWidget {
             const SizedBox(
               height: Sizes.spaceBtwSections,
             ),
-            SignupForm(isDark: isDark),
+            const SignupForm(),
             const SizedBox(
               height: Sizes.spaceBtwSections,
             ),

@@ -1,4 +1,5 @@
-import 'package:fake_store_flutter/features/authentication/controllers.onboarding/onboarding_controller.dart';
+
+import 'package:fake_store_flutter/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:fake_store_flutter/utils/device/device_utility.dart';
