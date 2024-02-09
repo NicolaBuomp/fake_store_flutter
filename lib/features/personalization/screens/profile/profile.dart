@@ -1,10 +1,13 @@
 import 'package:fake_store_flutter/common/widgets/appbar/appbar.dart';
 import 'package:fake_store_flutter/common/widgets/images/circular_image.dart';
 import 'package:fake_store_flutter/common/widgets/texts/section_heading.dart';
+import 'package:fake_store_flutter/features/personalization/controllers/user_controller.dart';
+import 'package:fake_store_flutter/features/personalization/screens/profile/widgets/change_name.dart';
 import 'package:fake_store_flutter/features/personalization/screens/profile/widgets/profile_menu.dart';
 import 'package:fake_store_flutter/utils/constants/image_strings.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -12,6 +15,7 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = UserController.instance;
     return Scaffold(
       appBar: const MyAppBar(
         showBackArrow: true,
@@ -48,8 +52,13 @@ class ProfileScreen extends StatelessWidget {
               ),
               const SizedBox(height: Sizes.spaceBtwItems),
               ProfileMenu(
-                  title: 'Nome', value: 'Nicola Buompane', onPressed: () {}),
-              ProfileMenu(title: 'Username', value: 'Nix', onPressed: () {}),
+                  title: 'Nome',
+                  value: controller.user.value.fullName,
+                  onPressed: () => Get.to(() => const ChangeNameScreen())),
+              ProfileMenu(
+                  title: 'Username',
+                  value: controller.user.value.username,
+                  onPressed: () {}),
               const SizedBox(
                 height: Sizes.spaceBtwItems,
               ),
@@ -62,16 +71,16 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(height: Sizes.spaceBtwItems),
               ProfileMenu(
                   title: 'User ID',
-                  value: '346295',
+                  value: controller.user.value.id,
                   icon: Iconsax.copy,
                   onPressed: () {}),
               ProfileMenu(
                   title: 'E-Mail',
-                  value: 'nicolabuompane.dev@gmail.com',
+                  value: controller.user.value.email,
                   onPressed: () {}),
               ProfileMenu(
                   title: 'Numero di Telefono',
-                  value: '+39 3510008604',
+                  value: controller.user.value.phoneNumber,
                   onPressed: () {}),
               ProfileMenu(title: 'Sesso', value: 'Uomo', onPressed: () {}),
               ProfileMenu(

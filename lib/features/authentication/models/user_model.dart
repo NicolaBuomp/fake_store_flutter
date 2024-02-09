@@ -32,7 +32,7 @@ class UserModel {
     String lastName = nameParts.length > 1 ? nameParts[1].toLowerCase() : "";
 
     String camelCaseUsername = "$firstName$lastName";
-    String usernameWithPrefix = "cwt_$camelCaseUsername";
+    String usernameWithPrefix = camelCaseUsername;
 
     return usernameWithPrefix;
   }
@@ -57,7 +57,7 @@ class UserModel {
     };
   }
 
-  factory UserModel.formSnapshot(
+  factory UserModel.fromSnapshot(
       DocumentSnapshot<Map<String, dynamic>> document) {
     final data = document.data();
     if (data != null && data.isNotEmpty) {

@@ -8,7 +8,6 @@ import 'package:fake_store_flutter/features/personalization/screens/address/addr
 import 'package:fake_store_flutter/features/personalization/screens/profile/profile.dart';
 import 'package:fake_store_flutter/features/shop/screens/orders/orders.dart';
 import 'package:fake_store_flutter/utils/constants/colors.dart';
-import 'package:fake_store_flutter/utils/constants/image_strings.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -33,9 +32,6 @@ class SettingsScreen extends StatelessWidget {
                               .headlineMedium!
                               .apply(color: MyColors.white))),
                   UserProfileTile(
-                      title: 'Nicola Buompane',
-                      subtitle: 'nicolabuompane.dev@gmail.com',
-                      image: MyImages.user,
                       onPressed: () => Get.to(() => const ProfileScreen())),
                   const SizedBox(
                     height: Sizes.spaceBtwSections,
