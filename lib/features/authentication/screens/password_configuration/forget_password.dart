@@ -1,5 +1,4 @@
 import 'package:fake_store_flutter/features/authentication/controllers/forget_password/forget_password_controller.dart';
-import 'package:fake_store_flutter/features/authentication/screens/password_configuration/reset_password.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:fake_store_flutter/utils/constants/text_string.dart';
 import 'package:fake_store_flutter/utils/validators/validation.dart';

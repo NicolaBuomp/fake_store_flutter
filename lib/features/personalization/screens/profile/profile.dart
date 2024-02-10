@@ -4,7 +4,6 @@ import 'package:fake_store_flutter/common/widgets/texts/section_heading.dart';
 import 'package:fake_store_flutter/features/personalization/controllers/user_controller.dart';
 import 'package:fake_store_flutter/features/personalization/screens/profile/widgets/change_name.dart';
 import 'package:fake_store_flutter/features/personalization/screens/profile/widgets/profile_menu.dart';
-import 'package:fake_store_flutter/utils/constants/image_strings.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -30,10 +29,13 @@ class ProfileScreen extends StatelessWidget {
                 width: double.infinity,
                 child: Column(
                   children: [
-                    const CircularImage(
-                      image: MyImages.user,
-                      width: 80,
-                      height: 80,
+                    Obx(
+                      () => CircularImage(
+                        image: controller.user.value.profilePicture,
+                        width: 80,
+                        height: 80,
+                        isNetworkImage: true,
+                      ),
                     ),
                     TextButton(
                         onPressed: () {},
@@ -91,7 +93,7 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(height: Sizes.spaceBtwItems),
               Center(
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () => controller.deleteAccountWarningDialog(),
                   child: const Text(
                     'Elimina Account',
                     style: TextStyle(color: Colors.red),

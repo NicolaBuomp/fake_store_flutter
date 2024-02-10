@@ -1,7 +1,6 @@
 import 'package:fake_store_flutter/common/widgets/images/circular_image.dart';
 import 'package:fake_store_flutter/features/personalization/controllers/user_controller.dart';
 import 'package:fake_store_flutter/utils/constants/colors.dart';
-import 'package:fake_store_flutter/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -20,13 +19,13 @@ class UserProfileTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = UserController.instance;
     return ListTile(
-      leading: CircularImage(
-        image: MyImages.user,
-        width: 50,
-        height: 50,
-        padding: 0,
-        isNetworkImage: isNetworkImage,
-      ),
+      leading: Obx(() => CircularImage(
+            image: controller.user.value.profilePicture,
+            width: 50,
+            height: 50,
+            padding: 0,
+            isNetworkImage: true,
+          )),
       title: Text(
         controller.user.value.fullName,
         style: Theme.of(context)

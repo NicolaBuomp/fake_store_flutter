@@ -1,3 +1,4 @@
+import 'package:fake_store_flutter/data/repositories/User/user_repository.dart';
 import 'package:fake_store_flutter/features/authentication/screens/login/login.dart';
 import 'package:fake_store_flutter/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:fake_store_flutter/features/authentication/screens/signup/verify_email.dart';
@@ -115,6 +116,25 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
+  Future<void> reAuthenticateWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      AuthCredential credential =
+          EmailAuthProvider.credential(email: email, password: password);
+      await _auth.currentUser!.reauthenticateWithCredential(credential);
+    } on FirebaseAuthException catch (e) {
+      print(e.code);
+    } on FirebaseException catch (e) {
+      print(e.code);
+    } on FormatException catch (_) {
+      print('Format Exeption');
+    } on PlatformException catch (e) {
+      print(e.code);
+    } catch (e) {
+      throw 'Errore generico, riprova!';
+    }
+  }
+
   // Google Authentication
   Future<UserCredential> signInWithGoogle() async {
     try {
@@ -150,6 +170,24 @@ class AuthenticationRepository extends GetxController {
       await GoogleSignIn().signOut();
       await FirebaseAuth.instance.signOut();
       Get.offAll(() => const LoginScreen());
+    } on FirebaseAuthException catch (e) {
+      print(e.code);
+    } on FirebaseException catch (e) {
+      print(e.code);
+    } on FormatException catch (_) {
+      print('Format Exeption');
+    } on PlatformException catch (e) {
+      print(e.code);
+    } catch (e) {
+      throw 'Errore generico, riprova!';
+    }
+  }
+
+// delete account
+  Future<void> deleteAccount() async {
+    try {
+      await UserRepository.instance.removeUserRecord(_auth.currentUser!.uid);
+      await _auth.currentUser!.delete();
     } on FirebaseAuthException catch (e) {
       print(e.code);
     } on FirebaseException catch (e) {
