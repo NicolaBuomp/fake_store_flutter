@@ -4,6 +4,7 @@ import 'package:fake_store_flutter/common/widgets/texts/section_heading.dart';
 import 'package:fake_store_flutter/features/personalization/controllers/user_controller.dart';
 import 'package:fake_store_flutter/features/personalization/screens/profile/widgets/change_name.dart';
 import 'package:fake_store_flutter/features/personalization/screens/profile/widgets/profile_menu.dart';
+import 'package:fake_store_flutter/utils/constants/image_strings.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -29,16 +30,20 @@ class ProfileScreen extends StatelessWidget {
                 width: double.infinity,
                 child: Column(
                   children: [
-                    Obx(
-                      () => CircularImage(
-                        image: controller.user.value.profilePicture,
+                    Obx(() {
+                      final networkImage = controller.user.value.profilePicture;
+                      final image = networkImage.isNotEmpty
+                          ? networkImage
+                          : MyImages.user;
+                      return CircularImage(
+                        image: image,
                         width: 80,
                         height: 80,
-                        isNetworkImage: true,
-                      ),
-                    ),
+                        isNetworkImage: networkImage.isNotEmpty,
+                      );
+                    }),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () => controller.uploadUserProfilePicture(),
                         child: const Text('Cambia l\'immagine del profilo'))
                   ],
                 ),

@@ -1,8 +1,12 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fake_store_flutter/data/repositories/authentication/authentication_repository.dart';
 import 'package:fake_store_flutter/features/authentication/models/user_model.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 
 class UserRepository extends GetxController {
   static UserRepository get instance => Get.find();
@@ -50,7 +54,7 @@ class UserRepository extends GetxController {
     } catch (e) {
       // Handle other unexpected errors
       print(e);
-      throw 'An unexpected error occurred. Please try again.';
+      throw 'An unexpected error : ${e.toString()}... fetchUserDetails';
     }
   }
 
@@ -126,6 +130,32 @@ class UserRepository extends GetxController {
       // Handle other unexpected errors
       print(e);
       throw 'An unexpected error occurred. Please try again.';
+    }
+  }
+
+  // upload image
+  Future<String> uploadImage(String path, XFile image) async {
+    try {
+      final ref = FirebaseStorage.instance.ref(path).child(image.name);
+      await ref.putFile(File(image.path));
+      final url = await ref.getDownloadURL();
+      return url;
+    } on FirebaseException catch (e) {
+      // Handle Firebase-specific errors
+      print(e.code);
+      rethrow; // Rethrow to allow for further handling
+    } on FormatException catch (e) {
+      // Handle data formatting errors
+      print(e);
+      rethrow;
+    } on PlatformException catch (e) {
+      // Handle platform-specific errors
+      print(e.code);
+      rethrow;
+    } catch (e) {
+      // Handle other unexpected errors
+      print(e);
+      throw 'Error: ${e.toString()}';
     }
   }
 }

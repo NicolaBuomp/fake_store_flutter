@@ -33,6 +33,10 @@ dependencies:
   firebase_auth: ^4.17.4
   cloud_firestore: ^4.15.4
   google_sign_in: ^6.2.1
+  image_picker: ^1.0.7
+  firebase_storage: ^11.6.5
+  cached_network_image: ^3.3.1
+  shimmer: ^3.0.0
 
 
 dev_dependencies:
