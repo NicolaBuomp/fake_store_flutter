@@ -87,10 +87,8 @@ class UserRepository extends GetxController {
   // update any field in specific user collection
   Future<void> updateSingleField(Map<String, dynamic> json) async {
     try {
-      await _db
-          .collection("users")
-          .doc(AuthenticationRepository.instance.authUser?.uid)
-          .update(json);
+      final docRef = _db.collection("users").doc(AuthenticationRepository.instance.authUser?.uid);
+      await docRef.update(json);
     } on FirebaseException catch (e) {
       // Handle Firebase-specific errors
       print(e.code);
@@ -141,21 +139,21 @@ class UserRepository extends GetxController {
       final url = await ref.getDownloadURL();
       return url;
     } on FirebaseException catch (e) {
-      // Handle Firebase-specific errors
+      // Gestisci gli errori specifici di Firebase
       print(e.code);
-      rethrow; // Rethrow to allow for further handling
+      rethrow; // Rilancia per consentire ulteriori gestioni
     } on FormatException catch (e) {
-      // Handle data formatting errors
+      // Gestisci gli errori di formattazione dei dati
       print(e);
       rethrow;
     } on PlatformException catch (e) {
-      // Handle platform-specific errors
+      // Gestisci gli errori specifici della piattaforma
       print(e.code);
       rethrow;
     } catch (e) {
-      // Handle other unexpected errors
+      // Gestisci altri errori imprevisti
       print(e);
-      throw 'Error: ${e.toString()}';
+      throw 'Errore: ${e.toString()}';
     }
   }
 }

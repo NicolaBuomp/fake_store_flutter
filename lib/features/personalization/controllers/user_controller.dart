@@ -155,12 +155,11 @@ class UserController extends GetxController {
           maxHeight: 512,
           maxWidth: 512);
       if (image != null) {
-        final imageUrl =
-            userRepository.uploadImage('users/images/profile/', image);
+        final imageUrl = await userRepository.uploadImage('users/images/profile/', image);
         Map<String, dynamic> json = {'profilePicture': imageUrl};
         await userRepository.updateSingleField(json);
 
-        user.value.profilePicture = imageUrl as String;
+        user.value.profilePicture = imageUrl;
         user.refresh();
         Loaders.successSnackBar(
             title: 'Congratulazioni', message: 'Immagine aggiornata');
