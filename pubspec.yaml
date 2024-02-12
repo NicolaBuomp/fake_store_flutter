@@ -28,7 +28,6 @@ dependencies:
   carousel_slider: ^4.2.1
   readmore: ^2.2.0
   flutter_rating_bar: ^4.0.1
-#  firebase
   firebase_core: ^2.25.4
   firebase_auth: ^4.17.4
   cloud_firestore: ^4.15.4

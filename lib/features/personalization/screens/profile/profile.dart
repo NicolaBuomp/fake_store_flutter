@@ -1,4 +1,5 @@
 import 'package:fake_store_flutter/common/widgets/appbar/appbar.dart';
+import 'package:fake_store_flutter/common/widgets/effects/shimmer_effect.dart';
 import 'package:fake_store_flutter/common/widgets/images/circular_image.dart';
 import 'package:fake_store_flutter/common/widgets/texts/section_heading.dart';
 import 'package:fake_store_flutter/features/personalization/controllers/user_controller.dart';
@@ -35,12 +36,15 @@ class ProfileScreen extends StatelessWidget {
                       final image = networkImage.isNotEmpty
                           ? networkImage
                           : MyImages.user;
-                      return CircularImage(
-                        image: image,
-                        width: 80,
-                        height: 80,
-                        isNetworkImage: networkImage.isNotEmpty,
-                      );
+                      return controller.imageUploading.value
+                          ? const ShimmerEffect(
+                              width: 80, height: 80, radius: 80)
+                          : CircularImage(
+                              image: image,
+                              width: 80,
+                              height: 80,
+                              isNetworkImage: networkImage.isNotEmpty,
+                            );
                     }),
                     TextButton(
                         onPressed: () => controller.uploadUserProfilePicture(),

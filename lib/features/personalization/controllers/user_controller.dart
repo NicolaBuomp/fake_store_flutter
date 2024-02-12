@@ -19,6 +19,7 @@ class UserController extends GetxController {
   Rx<UserModel> user = UserModel.empty().obs;
 
   final hidePassword = true.obs;
+  final imageUploading = false.obs;
   final verifyEmail = TextEditingController();
   final verifyPassword = TextEditingController();
   final userRepository = Get.put(UserRepository());
@@ -155,7 +156,9 @@ class UserController extends GetxController {
           maxHeight: 512,
           maxWidth: 512);
       if (image != null) {
-        final imageUrl = await userRepository.uploadImage('users/images/profile/', image);
+        imageUploading.value = true;
+        final imageUrl =
+            await userRepository.uploadImage('users/images/profile/', image);
         Map<String, dynamic> json = {'profilePicture': imageUrl};
         await userRepository.updateSingleField(json);
 
@@ -168,6 +171,8 @@ class UserController extends GetxController {
       Loaders.errorSnackBar(
           title: 'Errore',
           message: 'Non riesco a caricare la foto. ${e.toString()}');
+    } finally {
+      imageUploading.value = false;
     }
   }
 }
