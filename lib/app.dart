@@ -10,13 +10,17 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      themeMode: ThemeMode.system,
-      theme: MyAppTheme.lightTheme,
-      darkTheme: MyAppTheme.darkTheme,
-      initialBinding: GeneralBindings(),
-      // home: const OnBoardingScreen(),
-      home: const Scaffold(backgroundColor: MyColors.primary, body: Center(child: CircularProgressIndicator(color: Colors.white,),),)
-    );
-
+        themeMode: ThemeMode.system,
+        theme: MyAppTheme.lightTheme,
+        darkTheme: MyAppTheme.darkTheme,
+        initialBinding: GeneralBindings(),
+        home: const Scaffold(
+          backgroundColor: MyColors.primary,
+          body: Center(
+            child: CircularProgressIndicator(
+              color: Colors.white,
+            ),
+          ),
+        ));
   }
 }

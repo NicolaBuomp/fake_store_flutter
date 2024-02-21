@@ -9,6 +9,7 @@ import 'package:fake_store_flutter/features/personalization/screens/profile/prof
 import 'package:fake_store_flutter/features/shop/screens/orders/orders.dart';
 import 'package:fake_store_flutter/utils/constants/colors.dart';
 import 'package:fake_store_flutter/utils/constants/sizes.dart';
+import 'package:fake_store_flutter/utils/theme/controllers/theme_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -18,6 +19,7 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeController controller = Get.put(ThemeController());
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -126,14 +128,27 @@ class SettingsScreen extends StatelessWidget {
                       onChanged: (value) {},
                     ),
                   ),
-                  SettingsMenuTile(
-                    icon: Iconsax.location,
-                    title: 'HD Image Quality',
-                    subtitle: 'Abilita le immagini in HD',
-                    trailing: Switch(
-                      value: true,
-                      onChanged: (value) {},
-                    ),
+                  DropdownButton<ThemeModeOption>(
+                    value: controller.dropdownValue.value,
+                    onChanged: (ThemeModeOption? value) {
+                      if (value != null) {
+                        controller.changeDropdownValue(value);
+                      }
+                    },
+                    items: const [
+                      DropdownMenuItem(
+                        value: ThemeModeOption.automatico,
+                        child: Text('Automatico'),
+                      ),
+                      DropdownMenuItem(
+                        value: ThemeModeOption.scuro,
+                        child: Text('Scuro'),
+                      ),
+                      DropdownMenuItem(
+                        value: ThemeModeOption.chiaro,
+                        child: Text('Chiaro'),
+                      ),
+                    ],
                   ),
                   const SizedBox(
                     height: Sizes.spaceBtwItems,
